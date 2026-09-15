@@ -88,7 +88,7 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 border-b border-white/10 pb-8">
           <div>
             <span className="text-[#d8ff36] text-[10px] font-mono uppercase tracking-[0.4em] block mb-3">
-              ✦ Weaponized Offerings
+              Strategic Capabilities
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase text-white tracking-tight leading-none">
               Services Built For <br />

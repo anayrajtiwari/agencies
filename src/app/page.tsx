@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MarqueeTicker from "@/components/MarqueeTicker";
 import ServicesGrid from "@/components/ServicesGrid";
+import HowToWorkWithUs from "@/components/HowToWorkWithUs";
 import InteractiveScopeBuilder from "@/components/InteractiveScopeBuilder";
 import VisualVault from "@/components/VisualVault";
-import AntiAgencyTable from "@/components/AntiAgencyTable";
 import Footer from "@/components/Footer";
 import InquiryModal from "@/components/InquiryModal";
 
@@ -28,14 +28,14 @@ export default function Home() {
       {/* Services Grid (Deep Search, Next.js Craft, Social, Brand) */}
       <ServicesGrid onOpenInquiry={() => setInquiryOpen(true)} />
 
+      {/* How to Work with Us (Criteria, Process & Direct Email link) */}
+      <HowToWorkWithUs onOpenInquiry={() => setInquiryOpen(true)} />
+
       {/* Interactive Scope & Sprint Builder */}
       <InteractiveScopeBuilder onOpenInquiry={() => setInquiryOpen(true)} />
 
       {/* The Visual Vault (Images in background + Case Studies) */}
       <VisualVault onOpenInquiry={() => setInquiryOpen(true)} />
-
-      {/* Anti-Agency Comparison Table */}
-      <AntiAgencyTable onOpenInquiry={() => setInquiryOpen(true)} />
 
       {/* Footer */}
       <Footer onOpenInquiry={() => setInquiryOpen(true)} />
