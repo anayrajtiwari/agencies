@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void }) {
@@ -26,45 +26,13 @@ export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void })
   }, []);
 
   return (
-    <footer className="bg-[#07080b] border-t border-white/10 pt-20 pb-12 px-4 sm:px-8 relative overflow-hidden">
+    <footer className="bg-[#07080b] border-t border-white/10 pt-16 pb-12 px-4 sm:px-8 relative overflow-hidden">
       
-      {/* Glow */}
+      {/* Ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-40 bg-[#d8ff36]/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         
-        {/* Top Callout */}
-        <div className="rounded-3xl border border-white/10 bg-[#12141d]/70 p-8 sm:p-12 mb-16 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <span className="text-[10px] font-sans font-bold uppercase tracking-[0.4em] text-[#d8ff36] block mb-2">
-              Limited Batch • 10 Partners Only
-            </span>
-            <h3 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight">
-              Ready to ship this October?
-            </h3>
-            <p className="text-gray-400 text-xs sm:text-sm font-light mt-1">
-              Applications are reviewed on a rolling basis. Lock in your sprint early.
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white font-sans font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-full transition-all"
-            >
-              <Mail size={14} className="text-[#d8ff36]" />
-              <span>Direct Email</span>
-            </Link>
-
-            <button
-              onClick={onOpenInquiry}
-              className="bg-[#d8ff36] text-black font-sans font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(216,255,54,0.3)]"
-            >
-              Claim October Batch
-            </button>
-          </div>
-        </div>
-
         {/* Links Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-16 border-b border-white/10">
           <div>
@@ -72,22 +40,30 @@ export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void })
               Pillars
             </h4>
             <div className="flex flex-col space-y-2.5 text-xs font-sans text-gray-400">
-              <a href="#services" className="hover:text-white transition-colors">Deep SEO Authority</a>
-              <a href="#services" className="hover:text-white transition-colors">Bespoke Next.js Craft</a>
+              <a href="#services" className="hover:text-white transition-colors">Deep SEO & AI Retrieval</a>
               <a href="#services" className="hover:text-white transition-colors">Social Narrative Syndicate</a>
-              <a href="#services" className="hover:text-white transition-colors">Visual Hegemony</a>
+              <a href="#services" className="hover:text-white transition-colors">Visual Identity Hegemony</a>
+              <a href="#vault" className="hover:text-white transition-colors">Ecosystem Portfolio</a>
             </div>
           </div>
 
           <div>
             <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-[#d8ff36] mb-4">
-              Interactive
+              Engagement
             </h4>
             <div className="flex flex-col space-y-2.5 text-xs font-sans text-gray-400">
               <a href="#how-to-work" className="hover:text-white transition-colors">How to Work with Us</a>
-              <a href="#estimator" className="hover:text-white transition-colors">Scope Estimator</a>
-              <a href="#vault" className="hover:text-white transition-colors">The Vault</a>
-              <Link href="/contact" className="hover:text-[#d8ff36] transition-colors">Direct Email Desk</Link>
+              <a href="#engage" className="hover:text-white transition-colors">October &apos;26 Batch</a>
+              <Link href="/contact" className="hover:text-[#d8ff36] transition-colors flex items-center gap-1.5">
+                <Mail size={12} className="text-[#d8ff36]" />
+                <span>Direct Email Desk</span>
+              </Link>
+              <button
+                onClick={onOpenInquiry}
+                className="text-left text-xs font-sans text-gray-400 hover:text-white transition-colors"
+              >
+                Intake Application
+              </button>
             </div>
           </div>
 
@@ -134,7 +110,7 @@ export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void })
           <div className="flex items-center gap-6">
             <span>NO TEMPLATES</span>
             <span>NO FLUFF</span>
-            <span>HIGH VOLTAGE</span>
+            <span>DIRECT ARCHITECTURE</span>
           </div>
         </div>
 

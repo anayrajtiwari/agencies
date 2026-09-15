@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Flame, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, Flame, ShieldCheck, Zap, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
   return (
@@ -10,7 +11,20 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
       
       {/* ── Background Imagery & Collage Layers ── */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Editorial Background Image 1 (Abstract Studio / Architectural) */}
+        
+        {/* FIXED: Top-Left Background Atmosphere (No longer pitch black) */}
+        <div 
+          className="absolute -top-16 -left-16 w-[550px] h-[550px] rounded-3xl opacity-25 filter grayscale contrast-125 -rotate-12 blur-[1px] bg-cover bg-center transition-all"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1200&auto=format&fit=crop')`,
+          }}
+        />
+        {/* Top-Left Ambient Glow Bloom */}
+        <div className="absolute -top-20 -left-20 w-[550px] h-[550px] bg-[#d8ff36]/15 blur-[140px] rounded-full" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#8b5cf6]/12 blur-[120px] rounded-full" />
+        <div className="absolute top-6 left-6 w-60 h-60 halftone-accent pointer-events-none" />
+
+        {/* Top-Right Background Image */}
         <div 
           className="absolute -top-10 -right-20 w-[550px] h-[550px] rounded-3xl opacity-20 filter grayscale contrast-150 rotate-12 blur-[1px] bg-cover bg-center transition-all"
           style={{
@@ -18,7 +32,7 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
           }}
         />
 
-        {/* Editorial Background Image 2 (Urban High-Tech Motion) */}
+        {/* Bottom-Left Background Image */}
         <div 
           className="absolute -bottom-20 -left-20 w-[600px] h-[600px] rounded-full opacity-15 filter contrast-125 -rotate-6 bg-cover bg-center"
           style={{
@@ -26,23 +40,20 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
           }}
         />
 
-        {/* Dynamic ambient color blooms */}
+        {/* Dynamic center & right ambient color blooms */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#d8ff36]/10 blur-[150px] rounded-full" />
         <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[350px] bg-[#8b5cf6]/15 blur-[140px] rounded-full" />
-
-        {/* Halftone texture accent corner */}
-        <div className="absolute top-20 left-10 w-48 h-48 halftone-accent pointer-events-none" />
         <div className="absolute bottom-20 right-10 w-64 h-64 halftone-accent pointer-events-none" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
         
-        {/* Floating fun sticker tags */}
+        {/* Floating sticker tags (Zero Unicode emojis, pure SVG icons) */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <motion.div
             initial={{ rotate: -4, scale: 0.9 }}
             animate={{ rotate: -2, scale: 1 }}
-            whileHover={{ rotate: 0, scale: 1.1 }}
+            whileHover={{ rotate: 0, scale: 1.08 }}
             className="sticker-tag bg-[#d8ff36] text-black border border-black cursor-pointer shadow-[3px_3px_0px_#000]"
           >
             <Flame size={12} className="fill-black" />
@@ -52,21 +63,21 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
           <motion.div
             initial={{ rotate: 3, scale: 0.9 }}
             animate={{ rotate: 2, scale: 1 }}
-            whileHover={{ rotate: 0, scale: 1.1 }}
+            whileHover={{ rotate: 0, scale: 1.08 }}
             className="sticker-tag bg-[#8b5cf6] text-white border border-white/20 cursor-pointer shadow-[3px_3px_0px_#000]"
           >
             <Zap size={12} className="fill-white" />
-            <span>THE ANTI-AGENCY DOCTRINE</span>
+            <span>DIRECT FOUNDER ARCHITECTURE</span>
           </motion.div>
 
           <motion.div
             initial={{ rotate: -2, scale: 0.9 }}
             animate={{ rotate: -1, scale: 1 }}
-            whileHover={{ rotate: 0, scale: 1.1 }}
+            whileHover={{ rotate: 0, scale: 1.08 }}
             className="sticker-tag bg-[#1c202d] text-gray-300 border border-white/10 cursor-pointer hidden sm:inline-flex"
           >
             <ShieldCheck size={12} className="text-[#d8ff36]" />
-            <span>100% BESPOKE CODE & DESIGN</span>
+            <span>STRICT BATCH SELECTION</span>
           </motion.div>
         </div>
 
@@ -86,9 +97,9 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-base sm:text-lg md:text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10"
+          className="text-base sm:text-lg md:text-xl text-gray-300 font-normal max-w-2xl leading-relaxed mb-10"
         >
-          No bloated retainers. No recycled Figma templates. Just weaponized SEO authority, high-voltage Next.js web craft, and viral founder presence that commands the internet.
+          No bloated retainers. No recycled templates. Just weaponized SEO authority, organic narrative architecture, and high-status brand positioning that commands the internet.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -106,13 +117,13 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
             <ArrowRight size={16} />
           </button>
 
-          <a
-            href="#estimator"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#12141d]/90 hover:bg-[#1a1e2b] text-white font-mono text-xs uppercase tracking-widest px-7 py-4 rounded-full border border-white/10 hover:border-[#d8ff36]/50 transition-all"
+          <Link
+            href="/contact"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#12141d]/90 hover:bg-[#1a1e2b] text-white font-sans font-semibold text-xs uppercase tracking-widest px-7 py-4 rounded-full border border-white/10 hover:border-[#d8ff36]/50 transition-all"
           >
-            <Sparkles size={14} className="text-[#d8ff36]" />
-            <span>Interactive Scope Builder</span>
-          </a>
+            <Mail size={14} className="text-[#d8ff36]" />
+            <span>Direct Email Desk</span>
+          </Link>
         </motion.div>
 
         {/* High-Impact Stat Bar */}
@@ -133,19 +144,19 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
 
           <div className="p-4 rounded-2xl bg-[#12141d]/60 border border-white/5 backdrop-blur-md">
             <span className="text-3xl sm:text-4xl font-black text-white tracking-tight block">
-              0
+              10
             </span>
             <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400">
-              Canva & Offshore Fluff
+              Partners Per Cohort
             </span>
           </div>
 
           <div className="p-4 rounded-2xl bg-[#12141d]/60 border border-white/5 backdrop-blur-md">
             <span className="text-3xl sm:text-4xl font-black text-[#8b5cf6] tracking-tight block">
-              &lt;50ms
+              100%
             </span>
             <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400">
-              V8 Engine Performance
+              Bespoke Craft & Code
             </span>
           </div>
 

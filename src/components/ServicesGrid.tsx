@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Search, Code2, Share2, Palette, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Search, Share2, Palette, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 const services = [
   {
@@ -24,23 +24,6 @@ const services = [
   },
   {
     id: "02",
-    tag: "HIGH VOLTAGE DEV",
-    title: "Bespoke Web Craft & Portals",
-    desc: "Next.js 15, GPU-composited kinetic animations, sub-50ms render trees. Websites that look like museum-grade editorial magazines and convert like high-frequency terminals.",
-    bgImage: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop",
-    deliverables: [
-      "Next.js 15 & React 19 Architecture",
-      "Tailwind & Custom Kinetic Shaders",
-      "100/100 Lighthouse Performance",
-      "Zero-Dependency Static Compilers",
-    ],
-    metric: "<50ms TTI",
-    color: "from-[#8b5cf6]/15 via-transparent to-transparent",
-    accent: "text-[#8b5cf6]",
-    icon: Code2,
-  },
-  {
-    id: "03",
     tag: "VIRAL SYNDICATE",
     title: "Social Media & Narrative Direction",
     desc: "End-to-end founder positioning, X/Twitter thread architectures, viral short-form editing, and high-status brand commentary. We turn quiet builders into industry icons.",
@@ -57,7 +40,7 @@ const services = [
     icon: Share2,
   },
   {
-    id: "04",
+    id: "03",
     tag: "AESTHETIC HEGEMONY",
     title: "Visual Identity & Design Systems",
     desc: "Tactile typographic systems, brutalist luxury art direction, motion design guidelines, and unmistakable aesthetic assets that distinguish you from Canva-templated rivals.",
@@ -65,7 +48,7 @@ const services = [
     deliverables: [
       "Complete Brand Design Language",
       "Custom Typography & Iconography",
-      "Tactile 3D & Collage Motion Kits",
+      "Tactile Motion & Still Kits",
       "High-Converting Sales Collateral",
     ],
     metric: "Unmistakable Moat",
@@ -87,7 +70,7 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 border-b border-white/10 pb-8">
           <div>
-            <span className="text-[#d8ff36] text-[10px] font-mono uppercase tracking-[0.4em] block mb-3">
+            <span className="text-[#d8ff36] text-[10px] font-sans font-bold uppercase tracking-[0.4em] block mb-3">
               Strategic Capabilities
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase text-white tracking-tight leading-none">
@@ -98,13 +81,13 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
             </h2>
           </div>
 
-          <p className="text-gray-400 font-light text-xs sm:text-sm max-w-sm">
-            Every engagement is bespoke. We don&apos;t run retainers with junior temps. You get raw engineering power and aggressive taste.
+          <p className="text-gray-400 font-normal text-xs sm:text-sm max-w-sm">
+            Every engagement is bespoke. We don&apos;t run retainers with junior temps. You get high-resonance strategy and aggressive taste.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Services 3-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, idx) => {
             const Icon = service.icon;
             return (
@@ -114,7 +97,7 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group relative rounded-3xl border border-white/10 bg-[#12141d]/80 backdrop-blur-xl p-8 sm:p-10 flex flex-col justify-between overflow-hidden hover:border-[#d8ff36]/50 hover:bg-[#151824] transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.6)]"
+                className="group relative rounded-3xl border border-white/10 bg-[#12141d]/80 backdrop-blur-xl p-7 sm:p-8 flex flex-col justify-between overflow-hidden hover:border-[#d8ff36]/50 hover:bg-[#151824] transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.6)]"
               >
                 {/* Background image reveal on hover */}
                 <div
@@ -130,13 +113,8 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
                 <div className="relative z-10">
                   {/* Top bar */}
                   <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-2xl bg-black/60 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:text-[#d8ff36] group-hover:border-[#d8ff36]/40 transition-all duration-300">
-                        <Icon size={22} />
-                      </div>
-                      <span className="text-[10px] font-mono tracking-widest px-3 py-1 rounded-full border border-white/15 text-gray-300 bg-white/5 uppercase">
-                        {service.tag}
-                      </span>
+                    <div className="w-12 h-12 rounded-2xl bg-black/60 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:text-[#d8ff36] group-hover:border-[#d8ff36]/40 transition-all duration-300">
+                      <Icon size={20} />
                     </div>
 
                     <span className="text-xl font-mono font-bold text-gray-700 group-hover:text-white/40 transition-colors">
@@ -144,18 +122,22 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
                     </span>
                   </div>
 
+                  <span className="text-[10px] font-mono tracking-widest px-3 py-1 rounded-full border border-white/15 text-gray-300 bg-white/5 uppercase inline-block mb-4">
+                    {service.tag}
+                  </span>
+
                   {/* Title & Description */}
-                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight uppercase mb-4 group-hover:text-[#d8ff36] transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase mb-3 group-hover:text-[#d8ff36] transition-colors leading-snug">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-8">
+                  <p className="text-gray-400 text-xs font-normal leading-relaxed mb-6">
                     {service.desc}
                   </p>
 
                   {/* Deliverables Checklist */}
                   <div className="space-y-2 mb-8 pt-4 border-t border-white/5">
                     {service.deliverables.map((item, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-gray-300 font-mono">
+                      <div key={i} className="flex items-center gap-2 text-xs text-gray-300 font-sans">
                         <CheckCircle2 size={13} className="text-[#d8ff36] shrink-0" />
                         <span>{item}</span>
                       </div>
@@ -171,7 +153,7 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
 
                   <button
                     onClick={onOpenInquiry}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-white/80 group-hover:text-[#d8ff36] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-sans font-semibold uppercase tracking-widest text-white/80 group-hover:text-[#d8ff36] transition-colors"
                   >
                     <span>Request Scope</span>
                     <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -27,12 +27,11 @@ export default function Navbar({ onOpenInquiry }: { onOpenInquiry: () => void })
           </div>
         </Link>
 
-        {/* Desktop Nav Links with refined sans typography */}
-        <div className="hidden md:flex items-center gap-7 text-xs font-sans font-medium tracking-wider uppercase text-gray-300">
+        {/* Desktop Nav Links */}
+        <div className="hidden md:flex items-center gap-7 text-xs font-sans font-semibold tracking-wider uppercase text-gray-300">
           <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#how-to-work" className="hover:text-white transition-colors">How to Work</a>
-          <a href="#estimator" className="hover:text-white transition-colors">Scope Builder</a>
           <a href="#vault" className="hover:text-white transition-colors">The Vault</a>
+          <a href="#how-to-work" className="hover:text-white transition-colors">How to Work</a>
           <Link href="/contact" className="hover:text-[#d8ff36] transition-colors flex items-center gap-1.5">
             <Mail size={12} className="text-[#d8ff36]" />
             <span>Direct Email</span>
@@ -68,9 +67,8 @@ export default function Navbar({ onOpenInquiry }: { onOpenInquiry: () => void })
           className="md:hidden mt-2 p-5 bg-[#12141d]/95 backdrop-blur-2xl border border-white/10 rounded-2xl flex flex-col gap-4 font-sans text-xs font-semibold uppercase tracking-wider"
         >
           <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-[#d8ff36]">Services</a>
-          <a href="#how-to-work" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-[#d8ff36]">How to Work</a>
-          <a href="#estimator" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-[#d8ff36]">Scope Builder</a>
           <a href="#vault" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-[#d8ff36]">The Vault</a>
+          <a href="#how-to-work" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-[#d8ff36]">How to Work</a>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-[#d8ff36] flex items-center gap-1.5">
             <Mail size={12} className="text-[#d8ff36]" />
             <span>Direct Email</span>

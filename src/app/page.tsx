@@ -5,9 +5,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MarqueeTicker from "@/components/MarqueeTicker";
 import ServicesGrid from "@/components/ServicesGrid";
-import HowToWorkWithUs from "@/components/HowToWorkWithUs";
-import InteractiveScopeBuilder from "@/components/InteractiveScopeBuilder";
 import VisualVault from "@/components/VisualVault";
+import HowToWorkWithUs from "@/components/HowToWorkWithUs";
 import Footer from "@/components/Footer";
 import InquiryModal from "@/components/InquiryModal";
 
@@ -19,23 +18,20 @@ export default function Home() {
       {/* Navigation */}
       <Navbar onOpenInquiry={() => setInquiryOpen(true)} />
 
-      {/* Hero Section */}
+      {/* Hero Section (With fixed top-left lighting & texture) */}
       <Hero onOpenInquiry={() => setInquiryOpen(true)} />
 
       {/* High-Velocity Marquee Ticker */}
       <MarqueeTicker />
 
-      {/* Services Grid (Deep Search, Next.js Craft, Social, Brand) */}
+      {/* Services Grid (Deep Search, Social Syndicate, Brand Hegemony) */}
       <ServicesGrid onOpenInquiry={() => setInquiryOpen(true)} />
 
-      {/* How to Work with Us (Criteria, Process & Direct Email link) */}
+      {/* The Visual Vault (Live Websites: shri.org.in, anay.shri.org.in, rzglyph.shri.org.in) */}
+      <VisualVault />
+
+      {/* How to Work with Us + Unified Engage '26 & Email Contact Desk */}
       <HowToWorkWithUs onOpenInquiry={() => setInquiryOpen(true)} />
-
-      {/* Interactive Scope & Sprint Builder */}
-      <InteractiveScopeBuilder onOpenInquiry={() => setInquiryOpen(true)} />
-
-      {/* The Visual Vault (Images in background + Case Studies) */}
-      <VisualVault onOpenInquiry={() => setInquiryOpen(true)} />
 
       {/* Footer */}
       <Footer onOpenInquiry={() => setInquiryOpen(true)} />
