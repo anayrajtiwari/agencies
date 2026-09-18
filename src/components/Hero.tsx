@@ -82,66 +82,35 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Master Brand Heading (Styled exactly after authentic logo img.jpeg) */}
-        <motion.div
-          variants={fadeUpVariants}
-          className="flex flex-col items-center select-none text-center mb-10 w-full"
-        >
-          {/* Top Diamond Accent */}
-          <div className="flex items-center justify-end w-full max-w-[280px] sm:max-w-[420px] md:max-w-[560px] pr-4 sm:pr-8 mb-1">
-            <div className="flex items-center gap-1.5 text-[#8A241C]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8A241C]" />
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-[#8A241C]">
-                <polygon points="12,2 22,12 12,22 2,12" />
-              </svg>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8A241C]" />
-            </div>
-          </div>
-
-          {/* Top Bracket Bar with Curled Corner Terminations */}
-          <div className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[620px] flex items-center justify-between relative px-2">
-            <div className="w-3.5 h-3.5 border-t-2 border-l-2 border-[#171614] rounded-tl-sm -mb-[2px]" />
-            <div className="flex-1 h-[2px] bg-[#171614]" />
-            <div className="w-3.5 h-3.5 border-t-2 border-r-2 border-[#171614] rounded-tr-sm -mb-[2px]" />
-          </div>
-
-          {/* Master Wordmark: AGENCIES */}
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-serif font-bold text-[#171614] tracking-[0.06em] leading-[0.95] py-2 sm:py-3">
-            AGENCIES
+        {/* Main Heading: Agencies By SHRI in decorative editorial manner */}
+        <motion.div variants={fadeUpVariants} className="mb-8">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-normal tracking-tight text-[#171614] leading-[1.02] max-w-5xl">
+            <span className="font-serif font-normal tracking-tight">Agencies</span>{" "}
+            <span className="font-serif italic font-normal text-[#C25E38] px-1 sm:px-2">
+              By
+            </span>{" "}
+            <span className="font-serif font-normal tracking-wide">SHRI</span>
           </h1>
 
-          {/* Sub-Banner: •—— BY SHRI ——• */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-1 sm:mt-2 text-[#8A241C]">
-            <div className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8A241C]" />
-              <span className="text-xs sm:text-sm">✤</span>
-              <div className="w-8 sm:w-16 h-[1.5px] bg-[#8A241C]" />
-            </div>
-
-            <span className="font-serif font-semibold text-xs sm:text-sm md:text-base tracking-[0.3em] text-[#171614] uppercase">
-              BY SHRI
+          {/* Decorative Archival Divider */}
+          <div className="flex items-center justify-center gap-3 mt-4 select-none">
+            <span className="h-[1px] w-10 sm:w-16 bg-[#171614]/15" />
+            <span className="text-[11px] text-[#C25E38]">✤</span>
+            <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#6B665E]">
+              ESTD 2026
             </span>
-
-            <div className="flex items-center gap-1.5">
-              <div className="w-8 sm:w-16 h-[1.5px] bg-[#8A241C]" />
-              <span className="text-xs sm:text-sm">✤</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8A241C]" />
-            </div>
+            <span className="text-[11px] text-[#C25E38]">✤</span>
+            <span className="h-[1px] w-10 sm:w-16 bg-[#171614]/15" />
           </div>
-
-          {/* Date Anchor: ESTD 2026 */}
-          <span className="font-sans text-[10px] sm:text-xs font-semibold tracking-[0.35em] text-[#6B665E] uppercase mt-3">
-            ESTD 2026
-          </span>
         </motion.div>
 
         {/* Editorial Sub-Headline */}
         <motion.h2
           variants={fadeUpVariants}
-          className="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight text-[#171614] max-w-2xl mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl font-serif italic font-normal tracking-tight text-[#171614] max-w-2xl mb-5 leading-snug"
         >
           We cultivate brands that become{" "}
-          <span className="font-serif italic font-normal underline decoration-[#171614]/20 underline-offset-8">
+          <span className="underline decoration-[#171614]/20 underline-offset-8">
             impossible to ignore.
           </span>
         </motion.h2>
