@@ -1,30 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ArrowUpRight, Mail } from "lucide-react";
 import Link from "next/link";
 
-export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void }) {
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setTime(
-        now.toLocaleTimeString("en-US", {
-          timeZone: "UTC",
-          hour12: false,
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        }) + " UTC"
-      );
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
+export default function Footer() {
   return (
     <footer className="bg-[#F3EFE6] border-t border-[#171614]/10 pt-20 pb-12 px-4 sm:px-8 relative overflow-hidden text-[#171614]">
       <div className="max-w-6xl mx-auto relative z-10">
@@ -54,12 +34,6 @@ export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void })
                 <Mail size={12} className="text-[#C25E38]" />
                 <span>Direct Email Desk</span>
               </Link>
-              <button
-                onClick={onOpenInquiry}
-                className="text-left text-xs font-sans text-[#6B665E] hover:text-[#171614] transition-colors"
-              >
-                Intake Application
-              </button>
             </div>
           </div>
 
@@ -85,15 +59,19 @@ export default function Footer({ onOpenInquiry }: { onOpenInquiry: () => void })
 
           <div>
             <h4 className="text-[11px] font-sans font-semibold uppercase tracking-widest text-[#9E988D] mb-4">
-              Contact & Clock
+              Direct Contact
             </h4>
             <div className="flex flex-col space-y-2 text-xs font-sans text-[#6B665E]">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38] animate-pulse" />
                 <span className="text-[#171614] font-medium">October &apos;26 Inception</span>
               </div>
-              <span className="font-mono text-xs text-[#171614]">agenciesbyshri@gmail.com</span>
-              <span className="font-mono text-[11px] text-[#9E988D]">{time || "00:00:00 UTC"}</span>
+              <a
+                href="mailto:agenciesbyshri@gmail.com"
+                className="font-mono text-xs text-[#171614] hover:text-[#C25E38] transition-colors"
+              >
+                agenciesbyshri@gmail.com
+              </a>
             </div>
           </div>
         </div>

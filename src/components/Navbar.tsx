@@ -11,7 +11,7 @@ const navItems = [
   { label: "How to Work", href: "#how-to-work" },
 ];
 
-export default function Navbar({ onOpenInquiry }: { onOpenInquiry: () => void }) {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -75,16 +75,20 @@ export default function Navbar({ onOpenInquiry }: { onOpenInquiry: () => void })
 
         {/* Action Button with Spring Physics */}
         <div className="flex items-center gap-3">
-          <motion.button
+          <motion.div
             whileHover={{ scale: 1.03, y: -1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 450, damping: 25 }}
-            onClick={onOpenInquiry}
-            className="group hidden sm:inline-flex items-center gap-1.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wide px-5 py-2 rounded-full hover:bg-[#2E2C28] transition-colors shadow-sm cursor-pointer"
+            className="hidden sm:inline-flex"
           >
-            <span>October &apos;26 Cohort</span>
-            <ArrowUpRight size={13} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </motion.button>
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-1.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wide px-5 py-2 rounded-full hover:bg-[#2E2C28] transition-colors shadow-sm"
+            >
+              <span>Get in Touch</span>
+              <ArrowUpRight size={13} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </motion.div>
 
           {/* Mobile menu toggle */}
           <button
@@ -114,15 +118,13 @@ export default function Navbar({ onOpenInquiry }: { onOpenInquiry: () => void })
               <Mail size={14} className="text-[#C25E38]" />
               <span>Direct Email</span>
             </Link>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenInquiry();
-              }}
-              className="w-full text-center bg-[#171614] text-[#FBF9F5] font-medium py-3 rounded-full text-xs tracking-wider uppercase mt-2 shadow-sm"
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-center bg-[#171614] text-[#FBF9F5] font-medium py-3 rounded-full text-xs tracking-wider uppercase mt-2 shadow-sm block"
             >
-              Apply for October Cohort
-            </button>
+              Get in Touch
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

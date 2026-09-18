@@ -19,13 +19,13 @@ export default function ContactPage() {
   };
 
   const getMailtoUrl = () => {
-    const encodedSubject = encodeURIComponent(subject ? `[SHRI Agencies Intake] ${subject}` : "[SHRI Agencies Intake] Project Inquiry");
+    const encodedSubject = encodeURIComponent(subject ? `[SHRI Agencies] ${subject}` : "[SHRI Agencies] Project Inquiry");
     const fullBody = `Name/Company: ${name}\n\nProject Details:\n${message}\n\nSent via SHRI Agencies Web Portal`;
     return `mailto:${emailAddress}?subject=${encodedSubject}&body=${encodeURIComponent(fullBody)}`;
   };
 
   const getGmailWebUrl = () => {
-    const encodedSubject = encodeURIComponent(subject ? `[SHRI Agencies Intake] ${subject}` : "[SHRI Agencies Intake] Project Inquiry");
+    const encodedSubject = encodeURIComponent(subject ? `[SHRI Agencies] ${subject}` : "[SHRI Agencies] Project Inquiry");
     const fullBody = `Name/Company: ${name}\n\nProject Details:\n${message}\n\nSent via SHRI Agencies Web Portal`;
     return `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodedSubject}&body=${encodeURIComponent(fullBody)}`;
   };

@@ -40,7 +40,7 @@ const fadeUpVariants: Variants = {
   },
 };
 
-export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
+export default function Hero() {
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-8 pt-36 pb-24 overflow-hidden bg-[#FBF9F5] dot-grid">
       
@@ -128,17 +128,6 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
           variants={fadeUpVariants}
           className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.025, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 450, damping: 25 }}
-            onClick={onOpenInquiry}
-            className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] shadow-[0_4px_16px_rgba(23,22,20,0.12)] cursor-pointer"
-          >
-            <span>Apply for October Cohort</span>
-            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-          </motion.button>
-
           <motion.div
             whileHover={{ scale: 1.025, y: -2 }}
             whileTap={{ scale: 0.97 }}
@@ -147,11 +136,27 @@ export default function Hero({ onOpenInquiry }: { onOpenInquiry: () => void }) {
           >
             <Link
               href="/contact"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] shadow-[0_4px_16px_rgba(23,22,20,0.12)] cursor-pointer"
+            >
+              <Mail size={14} className="text-[#FBF9F5]" />
+              <span>Direct Email Desk</span>
+              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.025, y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 450, damping: 25 }}
+            className="w-full sm:w-auto"
+          >
+            <a
+              href="#services"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FFFFFF] hover:bg-[#F3EFE6] text-[#171614] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full border border-[#171614]/10 transition-colors shadow-sm"
             >
-              <Mail size={14} className="text-[#6B665E]" />
-              <span>Direct Email Desk</span>
-            </Link>
+              <span>Explore Capabilities</span>
+              <ArrowRight size={14} className="text-[#6B665E]" />
+            </a>
           </motion.div>
         </motion.div>
 

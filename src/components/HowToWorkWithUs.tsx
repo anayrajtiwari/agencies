@@ -8,20 +8,20 @@ import Link from "next/link";
 const steps = [
   {
     step: "01",
-    title: "Application Intake",
-    desc: "Submit your project dossier, technical ambitions, and desired deployment milestones through our structured application intake or direct email brief.",
+    title: "Direct Project Brief",
+    desc: "Submit your project goals, technical ambitions, and desired milestones directly to our official email desk (agenciesbyshri@gmail.com).",
     icon: FileText,
   },
   {
     step: "02",
     title: "SHRI Agencies Review",
-    desc: "Every submission is thoroughly evaluated by the SHRI Agencies leadership. We review technical scope, founder conviction, and cohort compatibility.",
+    desc: "Every brief is thoroughly evaluated by the SHRI Agencies leadership. We review technical scope, founder conviction, and cohort compatibility.",
     icon: SearchCheck,
   },
   {
     step: "03",
-    title: "Direct Email Outreach",
-    desc: "Following review, we contact shortlisted applicants directly at the email address provided in their application to present our tailored architectural roadmap and schedule a consultation.",
+    title: "Direct Response & Roadmap",
+    desc: "Following review, we contact you directly at your email address to present our tailored architectural roadmap and schedule a discovery consultation.",
     icon: Mail,
   },
   {
@@ -32,7 +32,7 @@ const steps = [
   },
 ];
 
-export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () => void }) {
+export default function HowToWorkWithUs() {
   const [copied, setCopied] = useState(false);
   const emailAddress = "agenciesbyshri@gmail.com";
 
@@ -143,8 +143,8 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
                 </span>
               </h3>
 
-              <p className="text-[#6B665E] text-sm sm:text-base leading-relaxed mb-6 font-normal">
-                Every application is scrutinized directly by our principal architects. If you prefer to bypass web forms and correspond directly,{" "}
+              <p className="text-[#6B665E] text-sm sm:text-base leading-relaxed mb-8 font-normal">
+                Every project brief is scrutinized directly by our principal architects. If you wish to correspond directly,{" "}
                 <Link
                   href="/contact"
                   className="text-[#171614] font-semibold underline underline-offset-4 decoration-[#171614]/40 hover:decoration-[#171614] hover:text-[#C25E38] transition-colors"
@@ -168,16 +168,6 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
                     <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.96 }}
-                  onClick={onOpenInquiry}
-                  className="group inline-flex items-center justify-center gap-2 bg-[#FFFFFF] border border-[#171614]/10 text-[#171614] font-sans font-medium text-xs tracking-wider uppercase px-7 py-4 rounded-full hover:bg-[#FAF8F2] hover:border-[#171614]/20 transition-all shadow-sm cursor-pointer"
-                >
-                  <span>Submit Intake Dossier</span>
-                  <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </motion.button>
               </div>
             </div>
 
@@ -224,7 +214,7 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
 
                 <motion.a
                   whileTap={{ scale: 0.95 }}
-                  href={`mailto:${emailAddress}?subject=[SHRI Agencies Intake] Project Brief`}
+                  href={`mailto:${emailAddress}?subject=[SHRI Agencies] Project Brief`}
                   className="group inline-flex items-center justify-center gap-1.5 py-2.5 px-5 rounded-full bg-[#171614] hover:bg-[#2E2C28] text-[#FBF9F5] font-sans text-xs font-medium transition-colors"
                 >
                   <span>Compose</span>

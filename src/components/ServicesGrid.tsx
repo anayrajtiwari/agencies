@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Search, Share2, Palette, ArrowUpRight, Check } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -49,7 +50,7 @@ const services = [
   },
 ];
 
-export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => void }) {
+export default function ServicesGrid() {
   return (
     <section id="services" className="py-32 px-4 sm:px-8 relative bg-[#FBF9F5]">
       <div className="max-w-6xl mx-auto relative z-10">
@@ -142,15 +143,13 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
                     {service.metric}
                   </span>
 
-                  <motion.button
-                    onClick={onOpenInquiry}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.96 }}
+                  <Link
+                    href="/contact"
                     className="group/btn inline-flex items-center gap-1.5 text-xs font-sans font-medium text-[#171614] hover:text-[#C25E38] transition-colors cursor-pointer"
                   >
-                    <span>Request Scope</span>
+                    <span>Direct Brief</span>
                     <ArrowUpRight size={13} className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                  </motion.button>
+                  </Link>
                 </div>
               </motion.div>
             );
