@@ -80,30 +80,42 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 25 }}
+                initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
-                className="luxury-card rounded-3xl border border-[#171614]/10 bg-[#FFFFFF] p-8 sm:p-10 flex flex-col justify-between"
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.7,
+                  delay: idx * 0.14,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                whileHover={{
+                  y: -6,
+                  transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+                }}
+                className="group rounded-3xl border border-[#171614]/10 bg-[#FFFFFF] p-8 sm:p-10 flex flex-col justify-between shadow-[0_4px_20px_rgba(23,22,20,0.02)] hover:shadow-[0_20px_40px_rgba(23,22,20,0.06)] hover:border-[#171614]/20 transition-all duration-300"
               >
                 <div>
                   {/* Top Bar */}
-                  <div className="flex items-center justify-between mb-8 pb-6 border-b border-[#171614]/5">
-                    <div className="w-11 h-11 rounded-2xl bg-[#F7F5EE] border border-[#171614]/8 flex items-center justify-center text-[#171614]">
-                      <Icon size={18} />
-                    </div>
+                  <div className="flex items-center justify-between mb-8 pb-6 border-b border-[#171614]/6">
+                    <motion.div
+                      whileHover={{ rotate: -8, scale: 1.05 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                      className="w-12 h-12 rounded-2xl bg-[#F7F5EE] border border-[#171614]/8 flex items-center justify-center text-[#171614] group-hover:bg-[#171614] group-hover:text-[#FBF9F5] group-hover:border-[#171614] transition-all duration-300"
+                    >
+                      <Icon size={20} />
+                    </motion.div>
 
-                    <span className="font-serif text-2xl text-[#9E988D] italic">
+                    <span className="font-serif text-3xl text-[#9E988D] italic font-light select-none group-hover:text-[#C25E38] transition-colors duration-300">
                       {service.id}
                     </span>
                   </div>
 
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-[#6B665E] bg-[#F7F5EE] border border-[#171614]/8 px-3 py-1 rounded-full inline-block mb-4">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-[#6B665E] bg-[#F7F5EE] border border-[#171614]/8 px-3 py-1 rounded-full inline-block mb-4 group-hover:border-[#C25E38]/30 transition-colors duration-300">
                     {service.tag}
                   </span>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#171614] tracking-tight mb-4">
+                  <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#171614] tracking-tight mb-4 group-hover:text-[#C25E38] transition-colors duration-300">
                     {service.title}
                   </h3>
                   
@@ -112,31 +124,33 @@ export default function ServicesGrid({ onOpenInquiry }: { onOpenInquiry: () => v
                   </p>
 
                   {/* Deliverables Checklist */}
-                  <div className="space-y-2.5 mb-10 pt-6 border-t border-[#171614]/5">
+                  <div className="space-y-3 mb-10 pt-6 border-t border-[#171614]/6">
                     {service.deliverables.map((item, i) => (
-                      <div key={i} className="flex items-start gap-2.5 text-xs text-[#4A4742]">
-                        <div className="w-4 h-4 rounded-full bg-[#F3EFE6] flex items-center justify-center shrink-0 mt-0.5">
-                          <Check size={10} className="text-[#171614]" />
+                      <div key={i} className="flex items-start gap-3 text-xs text-[#4A4742] group/item">
+                        <div className="w-4 h-4 rounded-full bg-[#F3EFE6] group-hover/item:bg-[#171614] group-hover/item:text-[#FBF9F5] flex items-center justify-center shrink-0 mt-0.5 transition-colors duration-200">
+                          <Check size={10} className="text-[#171614] group-hover/item:text-[#FBF9F5]" />
                         </div>
-                        <span className="leading-snug">{item}</span>
+                        <span className="leading-snug group-hover/item:text-[#171614] transition-colors duration-200">{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Bottom Row */}
-                <div className="pt-6 border-t border-[#171614]/10 flex items-center justify-between">
+                <div className="pt-6 border-t border-[#171614]/8 flex items-center justify-between">
                   <span className="font-serif italic text-xs text-[#171614] font-medium">
                     {service.metric}
                   </span>
 
-                  <button
+                  <motion.button
                     onClick={onOpenInquiry}
-                    className="inline-flex items-center gap-1 text-xs font-sans font-medium text-[#171614] hover:text-[#C25E38] transition-colors"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="group/btn inline-flex items-center gap-1.5 text-xs font-sans font-medium text-[#171614] hover:text-[#C25E38] transition-colors cursor-pointer"
                   >
                     <span>Request Scope</span>
-                    <ArrowUpRight size={13} />
-                  </button>
+                    <ArrowUpRight size={13} className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                  </motion.button>
                 </div>
               </motion.div>
             );

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowLeft, Copy, Check, Mail, Send, ExternalLink, ShieldCheck } from "lucide-react";
 
 export default function ContactPage() {
@@ -35,7 +36,12 @@ export default function ContactPage() {
       {/* Background paper texture & warm ambient glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-b from-[#F0EBE1] to-transparent blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="max-w-3xl mx-auto relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-3xl mx-auto relative z-10"
+      >
         
         {/* Navigation Bar */}
         <div className="flex items-center justify-between mb-16 pb-6 border-b border-[#171614]/10">
@@ -87,14 +93,15 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <button
+          <motion.button
+            whileTap={{ scale: 0.95 }}
             onClick={handleCopy}
-            className="inline-flex items-center gap-2 bg-[#F7F5EE] hover:bg-[#EDE8DC] text-[#171614] font-sans font-semibold text-xs tracking-wider uppercase px-5 py-3 rounded-full border border-[#171614]/10 transition-all shrink-0"
+            className="inline-flex items-center gap-2 bg-[#F7F5EE] hover:bg-[#EDE8DC] text-[#171614] font-sans font-semibold text-xs tracking-wider uppercase px-5 py-3 rounded-full border border-[#171614]/10 transition-all shrink-0 cursor-pointer"
           >
             {copied ? (
               <>
                 <Check size={14} className="text-[#C25E38]" />
-                <span>Copied to Clipboard</span>
+                <span className="text-[#C25E38]">Copied to Clipboard</span>
               </>
             ) : (
               <>
@@ -102,7 +109,7 @@ export default function ContactPage() {
                 <span>Copy Address</span>
               </>
             )}
-          </button>
+          </motion.button>
         </div>
 
         {/* Interactive Email Composer Form */}
@@ -165,23 +172,27 @@ export default function ContactPage() {
 
           {/* Action Triggers */}
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
               href={getMailtoUrl()}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] transition-all shadow-sm active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] transition-all shadow-sm cursor-pointer"
             >
               <Send size={13} />
               <span>Send via Email Client</span>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
               href={getGmailWebUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F7F5EE] border border-[#171614]/10 text-[#171614] font-sans font-semibold text-xs tracking-wider uppercase px-6 py-4 rounded-full hover:bg-[#EDE8DC] transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F7F5EE] border border-[#171614]/10 text-[#171614] font-sans font-semibold text-xs tracking-wider uppercase px-6 py-4 rounded-full hover:bg-[#EDE8DC] transition-all cursor-pointer"
             >
               <span>Open in Gmail Web</span>
               <ExternalLink size={13} />
-            </a>
+            </motion.a>
           </div>
         </div>
 
@@ -191,7 +202,7 @@ export default function ContactPage() {
           <span>SHRI AGENCIES • DIVISION 03</span>
         </div>
 
-      </div>
+      </motion.div>
     </main>
   );
 }

@@ -69,23 +69,31 @@ export default function VisualVault() {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="luxury-card rounded-3xl border border-[#171614]/10 bg-[#FFFFFF] overflow-hidden flex flex-col justify-between group"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.7,
+                delay: idx * 0.14,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              whileHover={{
+                y: -6,
+                transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+              }}
+              className="rounded-3xl border border-[#171614]/10 bg-[#FFFFFF] overflow-hidden flex flex-col justify-between group shadow-[0_4px_20px_rgba(23,22,20,0.02)] hover:shadow-[0_20px_40px_rgba(23,22,20,0.06)] hover:border-[#171614]/20 transition-all duration-300 cursor-pointer"
             >
               {/* Image Preview with warm gradient overlay */}
               <div className="relative h-56 w-full overflow-hidden bg-[#EAE5DA]">
                 <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-108 filter brightness-95 group-hover:brightness-100"
                   style={{ backgroundImage: `url('${site.image}')` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#171614]/70 via-[#171614]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#171614]/75 via-[#171614]/25 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
                 
                 {/* Floating domain pill */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md text-[11px] font-mono text-[#171614] font-medium shadow-sm">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFFFF]/95 backdrop-blur-md text-[11px] font-mono text-[#171614] font-medium shadow-sm transition-transform duration-300 group-hover:scale-105">
                     <Globe size={11} className="text-[#C25E38]" />
                     <span>{site.domain}</span>
                   </span>
@@ -104,7 +112,7 @@ export default function VisualVault() {
               {/* Textual Content */}
               <div className="p-8 flex flex-col justify-between flex-grow">
                 <div>
-                  <h3 className="text-xl font-sans font-bold text-[#171614] tracking-tight mb-3 group-hover:text-[#C25E38] transition-colors">
+                  <h3 className="text-xl font-sans font-bold text-[#171614] tracking-tight mb-3 group-hover:text-[#C25E38] transition-colors duration-300">
                     {site.title}
                   </h3>
 
@@ -119,16 +127,16 @@ export default function VisualVault() {
                     {site.tags.slice(0, 2).map((t) => (
                       <span
                         key={t}
-                        className="text-[10px] font-sans text-[#7A756D] bg-[#F7F5EE] border border-[#171614]/6 px-2.5 py-0.5 rounded-md"
+                        className="text-[10px] font-sans text-[#7A756D] bg-[#F7F5EE] border border-[#171614]/6 px-2.5 py-0.5 rounded-md group-hover:border-[#171614]/15 transition-colors"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <span className="inline-flex items-center gap-1 text-xs font-sans font-medium text-[#171614] group-hover:text-[#C25E38] transition-colors">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-[#171614] group-hover:text-[#C25E38] transition-colors">
                     <span>Visit Live</span>
-                    <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowUpRight size={13} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
                 </div>
               </div>

@@ -77,23 +77,31 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
             return (
               <motion.div
                 key={item.step}
-                initial={{ opacity: 0, y: 25 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="luxury-card rounded-3xl border border-[#171614]/10 bg-[#FFFFFF] p-8 flex flex-col justify-between"
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{
+                  duration: 0.7,
+                  delay: idx * 0.12,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                whileHover={{
+                  y: -5,
+                  transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] },
+                }}
+                className="group rounded-3xl border border-[#171614]/10 bg-[#FFFFFF] p-8 flex flex-col justify-between shadow-[0_4px_20px_rgba(23,22,20,0.02)] hover:shadow-[0_16px_36px_rgba(23,22,20,0.05)] hover:border-[#171614]/20 transition-all duration-300"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#171614]/5">
-                    <div className="w-10 h-10 rounded-xl bg-[#F7F5EE] border border-[#171614]/8 flex items-center justify-center text-[#171614]">
+                  <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#171614]/6">
+                    <div className="w-10 h-10 rounded-xl bg-[#F7F5EE] border border-[#171614]/8 flex items-center justify-center text-[#171614] group-hover:bg-[#171614] group-hover:text-[#FBF9F5] transition-all duration-300">
                       <Icon size={18} />
                     </div>
-                    <span className="font-serif italic text-2xl text-[#9E988D]">
+                    <span className="font-serif italic text-3xl text-[#9E988D] font-light select-none group-hover:text-[#C25E38] transition-colors duration-300">
                       {item.step}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-sans font-bold text-[#171614] tracking-tight mb-3">
+                  <h3 className="text-lg font-sans font-bold text-[#171614] tracking-tight mb-3 group-hover:text-[#C25E38] transition-colors duration-300">
                     {item.title}
                   </h3>
 
@@ -102,7 +110,7 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-[#171614]/5 text-[10px] font-mono uppercase tracking-widest text-[#9E988D]">
+                <div className="mt-8 pt-4 border-t border-[#171614]/6 text-[10px] font-mono uppercase tracking-widest text-[#9E988D] group-hover:text-[#171614] transition-colors duration-300">
                   Stage {item.step} of 04
                 </div>
               </motion.div>
@@ -113,9 +121,10 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
         {/* UNIFIED: Engage '26 & Direct Email Desk */}
         <motion.div
           id="engage"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="rounded-3xl border border-[#171614]/12 bg-[#F3EFE6] p-8 sm:p-12 shadow-[0_8px_32px_rgba(23,22,20,0.03)] relative overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -138,7 +147,7 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
                 Every application is scrutinized directly by our principal architects. If you prefer to bypass web forms and correspond directly,{" "}
                 <Link
                   href="/contact"
-                  className="text-[#171614] font-semibold underline underline-offset-4 decoration-[#171614]/40 hover:decoration-[#171614] transition-colors"
+                  className="text-[#171614] font-semibold underline underline-offset-4 decoration-[#171614]/40 hover:decoration-[#171614] hover:text-[#C25E38] transition-colors"
                 >
                   click here
                 </Link>{" "}
@@ -149,39 +158,43 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] transition-all shadow-sm active:scale-95"
-                >
-                  <Mail size={14} />
-                  <span>Click Here to Email Us</span>
-                  <ArrowRight size={14} />
-                </Link>
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.96 }}>
+                  <Link
+                    href="/contact"
+                    className="group inline-flex items-center justify-center gap-2 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] transition-all shadow-sm w-full sm:w-auto"
+                  >
+                    <Mail size={14} className="text-[#FBF9F5]" />
+                    <span>Click Here to Email Us</span>
+                    <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                </motion.div>
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.96 }}
                   onClick={onOpenInquiry}
-                  className="inline-flex items-center justify-center gap-2 bg-[#FFFFFF] border border-[#171614]/10 text-[#171614] font-sans font-medium text-xs tracking-wider uppercase px-7 py-4 rounded-full hover:bg-[#FAF8F2] transition-all shadow-sm"
+                  className="group inline-flex items-center justify-center gap-2 bg-[#FFFFFF] border border-[#171614]/10 text-[#171614] font-sans font-medium text-xs tracking-wider uppercase px-7 py-4 rounded-full hover:bg-[#FAF8F2] hover:border-[#171614]/20 transition-all shadow-sm cursor-pointer"
                 >
                   <span>Submit Intake Dossier</span>
-                  <ArrowUpRight size={14} />
-                </button>
+                  <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </motion.button>
               </div>
             </div>
 
             {/* Right Column: Direct Email Address Card */}
-            <div className="lg:col-span-5 bg-[#FFFFFF] border border-[#171614]/10 rounded-2xl p-7 sm:p-8 shadow-sm flex flex-col justify-between">
+            <div className="lg:col-span-5 bg-[#FFFFFF] border border-[#171614]/10 rounded-2xl p-7 sm:p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[11px] font-sans uppercase tracking-widest text-[#9E988D] font-medium">
                     Official Agency Inbox
                   </span>
                   <span className="flex items-center gap-1.5 text-[11px] font-mono text-[#C25E38]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38] animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-[#C25E38] animate-pulse" />
                     Live Gmail Desk
                   </span>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#171614]/8 font-mono text-sm sm:text-base text-[#171614] font-semibold select-all break-all mb-4">
+                <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#171614]/8 font-mono text-sm sm:text-base text-[#171614] font-semibold select-all break-all mb-4 transition-colors hover:border-[#171614]/20">
                   {emailAddress}
                 </div>
 
@@ -191,14 +204,15 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
               </div>
 
               <div className="flex items-center gap-2 pt-4 border-t border-[#171614]/8">
-                <button
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
                   onClick={handleCopy}
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-[#F7F5EE] hover:bg-[#EDE8DC] text-[#171614] font-sans text-xs font-medium border border-[#171614]/10 transition-colors"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-[#F7F5EE] hover:bg-[#EDE8DC] text-[#171614] font-sans text-xs font-medium border border-[#171614]/10 transition-colors cursor-pointer"
                 >
                   {copied ? (
                     <>
                       <Check size={14} className="text-[#C25E38]" />
-                      <span>Copied!</span>
+                      <span className="font-semibold text-[#C25E38]">Copied to Clipboard</span>
                     </>
                   ) : (
                     <>
@@ -206,15 +220,16 @@ export default function HowToWorkWithUs({ onOpenInquiry }: { onOpenInquiry: () =
                       <span>Copy Email</span>
                     </>
                   )}
-                </button>
+                </motion.button>
 
-                <a
+                <motion.a
+                  whileTap={{ scale: 0.95 }}
                   href={`mailto:${emailAddress}?subject=[SHRI Agencies Intake] Project Brief`}
-                  className="inline-flex items-center justify-center gap-1.5 py-2.5 px-5 rounded-full bg-[#171614] hover:bg-[#2E2C28] text-[#FBF9F5] font-sans text-xs font-medium transition-colors"
+                  className="group inline-flex items-center justify-center gap-1.5 py-2.5 px-5 rounded-full bg-[#171614] hover:bg-[#2E2C28] text-[#FBF9F5] font-sans text-xs font-medium transition-colors"
                 >
                   <span>Compose</span>
-                  <ArrowUpRight size={13} />
-                </a>
+                  <ArrowUpRight size={13} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </motion.a>
               </div>
             </div>
 
