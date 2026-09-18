@@ -19,14 +19,14 @@ export default function ContactPage() {
   };
 
   const getMailtoUrl = () => {
-    const encodedSubject = encodeURIComponent(subject ? `[SHRI Agencies] ${subject}` : "[SHRI Agencies] Project Inquiry");
-    const fullBody = `Name/Company: ${name}\n\nProject Details:\n${message}\n\nSent via SHRI Agencies Web Portal`;
+    const encodedSubject = encodeURIComponent(subject ? `[Agencies by SHRI] ${subject}` : "[Agencies by SHRI] Project Inquiry");
+    const fullBody = `Name/Company: ${name}\n\nProject Details:\n${message}\n\nSent via Agencies, by SHRI Web Portal`;
     return `mailto:${emailAddress}?subject=${encodedSubject}&body=${encodeURIComponent(fullBody)}`;
   };
 
   const getGmailWebUrl = () => {
-    const encodedSubject = encodeURIComponent(subject ? `[SHRI Agencies] ${subject}` : "[SHRI Agencies] Project Inquiry");
-    const fullBody = `Name/Company: ${name}\n\nProject Details:\n${message}\n\nSent via SHRI Agencies Web Portal`;
+    const encodedSubject = encodeURIComponent(subject ? `[Agencies by SHRI] ${subject}` : "[Agencies by SHRI] Project Inquiry");
+    const fullBody = `Name/Company: ${name}\n\nProject Details:\n${message}\n\nSent via Agencies, by SHRI Web Portal`;
     return `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodedSubject}&body=${encodeURIComponent(fullBody)}`;
   };
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-[#6B665E] text-sm sm:text-base font-normal max-w-2xl leading-relaxed">
-            Send your project dossier, pitch deck, or requirements directly to our dedicated agency inbox. Messages submitted here are delivered straight to our primary Gmail app and reviewed promptly by the SHRI Agencies team.
+            Send your project dossier, pitch deck, or requirements directly to our dedicated agency inbox. Messages submitted here are delivered straight to our primary Gmail app and reviewed promptly by the Agencies team under SHRI.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ export default function ContactPage() {
         {/* Operating Principles Footer Bar */}
         <div className="text-center pt-8 border-t border-[#171614]/10 text-xs font-sans text-[#9E988D] flex flex-col sm:flex-row items-center justify-between gap-4">
           <span>Official Inbox: agenciesbyshri@gmail.com</span>
-          <span>SHRI AGENCIES • DIVISION 03</span>
+          <span>AGENCIES • AN INITIATIVE BY SHRI • DIVISION 03</span>
         </div>
 
       </motion.div>

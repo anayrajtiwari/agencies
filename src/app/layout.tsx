@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SHRI Agencies — Strategic Presence, SEO & Visual Identity",
+  title: "Agencies By SHRI — Strategic Presence, SEO & Visual Identity",
   description:
     "A strategic creative practice by SHRI. Cultivating category-defining presence through deep search & AI retrieval, narrative direction, and bespoke identity systems. Launching October 2026.",
   keywords: [
-    "SHRI Agencies",
+    "Agencies By SHRI",
     "Creative Practice",
     "Deep SEO",
     "AI Retrieval Indexing",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Visual Identity",
   ],
   openGraph: {
-    title: "SHRI Agencies — Strategic Practice by SHRI",
+    title: "Agencies By SHRI — Strategic Practice by SHRI",
     description:
       "Deep search authority, founder narrative architecture, and bespoke visual identity systems. Launching October 2026.",
     type: "website",

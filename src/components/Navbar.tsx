@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Mail, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -22,23 +23,30 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-5xl mx-auto"
     >
-      <nav className="bg-[#FBF9F5]/90 backdrop-blur-md border border-[#171614]/10 rounded-full px-5 py-3 shadow-[0_4px_24px_rgba(23,22,20,0.04)] flex items-center justify-between">
+      <nav className="bg-[#FBF9F5]/90 backdrop-blur-md border border-[#171614]/10 rounded-full px-5 py-2.5 shadow-[0_4px_24px_rgba(23,22,20,0.04)] flex items-center justify-between">
         
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3 group">
           <motion.div
-            whileHover={{ rotate: 12, scale: 1.08 }}
+            whileHover={{ rotate: 8, scale: 1.08 }}
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-            className="w-7 h-7 rounded-full bg-[#171614] flex items-center justify-center text-[#FBF9F5] font-sans font-bold text-xs tracking-tight shadow-sm"
+            className="w-8 h-8 rounded-full overflow-hidden border border-[#171614]/15 shadow-sm bg-[#F5F1E8] shrink-0"
           >
-            SA
+            <Image
+              src="/logo.jpeg"
+              alt="Agencies, by SHRI"
+              width={64}
+              height={64}
+              className="w-full h-full object-cover"
+              priority
+            />
           </motion.div>
           <div className="flex items-baseline gap-2">
-            <span className="font-sans font-bold text-sm tracking-tight text-[#171614] uppercase group-hover:text-[#C25E38] transition-colors duration-300">
-              SHRI AGENCIES
+            <span className="font-serif font-bold text-sm tracking-[0.08em] text-[#171614] uppercase group-hover:text-[#C25E38] transition-colors duration-300">
+              AGENCIES
             </span>
             <span className="hidden sm:inline-block font-serif italic text-xs text-[#6B665E]">
-              Strategic Practice
+              by SHRI
             </span>
           </div>
         </Link>

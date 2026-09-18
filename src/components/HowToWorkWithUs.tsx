@@ -14,8 +14,8 @@ const steps = [
   },
   {
     step: "02",
-    title: "SHRI Agencies Review",
-    desc: "Every brief is thoroughly evaluated by the SHRI Agencies leadership. We review technical scope, founder conviction, and cohort compatibility.",
+    title: "Agencies Review",
+    desc: "Every brief is thoroughly evaluated by the Agencies leadership under SHRI. We review technical scope, founder conviction, and cohort compatibility.",
     icon: SearchCheck,
   },
   {
@@ -62,7 +62,7 @@ export default function HowToWorkWithUs() {
 
           <div className="max-w-md">
             <p className="text-[#6B665E] font-sans text-sm leading-relaxed mb-2">
-              We operate exclusively on an intentional seasonal cohort model. Every submission is reviewed directly by the SHRI Agencies team prior to partnership.
+              We operate exclusively on an intentional seasonal cohort model. Every submission is reviewed directly by the Agencies leadership under SHRI prior to partnership.
             </p>
             <span className="text-xs font-mono text-[#171614] font-medium tracking-wide block">
               Criteria: Technical Ambition • Strategic Fit • October 2026 Target
@@ -133,11 +133,11 @@ export default function HowToWorkWithUs() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFFFFF] border border-[#171614]/10 text-[11px] font-sans font-medium text-[#171614] mb-4 shadow-sm">
                 <Sparkles size={12} className="text-[#C25E38]" />
-                <span>October 2026 Cohort • 10 Partners Only</span>
+                <span>An Initiative by SHRI • October 2026 Cohort</span>
               </div>
 
               <h3 className="text-3xl sm:text-4xl font-normal tracking-tight text-[#171614] leading-[1.1] mb-4">
-                Engage SHRI Agencies & <br />
+                Engage Agencies, by SHRI & <br />
                 <span className="font-serif italic font-normal text-[#171614]">
                   Direct Email Correspondence.
                 </span>
@@ -214,7 +214,7 @@ export default function HowToWorkWithUs() {
 
                 <motion.a
                   whileTap={{ scale: 0.95 }}
-                  href={`mailto:${emailAddress}?subject=[SHRI Agencies] Project Brief`}
+                  href={`mailto:${emailAddress}?subject=[Agencies by SHRI] Project Brief`}
                   className="group inline-flex items-center justify-center gap-1.5 py-2.5 px-5 rounded-full bg-[#171614] hover:bg-[#2E2C28] text-[#FBF9F5] font-sans text-xs font-medium transition-colors"
                 >
                   <span>Compose</span>

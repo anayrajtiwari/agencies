@@ -79,7 +79,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-sans text-[#9E988D] gap-4">
           <div>
-            © {new Date().getFullYear()} SHRI AGENCIES • SHRI DIVISION 03
+            © {new Date().getFullYear()} AGENCIES • AN INITIATIVE BY SHRI • DIVISION 03
           </div>
           <div className="flex items-center gap-6 font-medium">
             <span>STRATEGIC PRACTICE</span>
