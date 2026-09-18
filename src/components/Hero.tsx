@@ -82,26 +82,26 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Main Heading: Agencies By SHRI in decorative editorial manner */}
-        <motion.div variants={fadeUpVariants} className="mb-8">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-normal tracking-tight text-[#171614] leading-[1.02] max-w-5xl">
-            <span className="font-serif font-normal tracking-tight">Agencies</span>{" "}
-            <span className="font-serif italic font-normal text-[#C25E38] px-1 sm:px-2">
-              By
-            </span>{" "}
-            <span className="font-serif font-normal tracking-wide">SHRI</span>
+        {/* Main Heading: Agencies with "By SHRI" beneath in smaller size */}
+        <motion.div variants={fadeUpVariants} className="mb-10 text-center flex flex-col items-center">
+          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[7.5rem] font-serif font-normal tracking-tight text-[#171614] leading-[0.95]">
+            Agencies
           </h1>
 
-          {/* Decorative Archival Divider */}
-          <div className="flex items-center justify-center gap-3 mt-4 select-none">
-            <span className="h-[1px] w-10 sm:w-16 bg-[#171614]/15" />
-            <span className="text-[11px] text-[#C25E38]">✤</span>
-            <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#6B665E]">
-              ESTD 2026
-            </span>
-            <span className="text-[11px] text-[#C25E38]">✤</span>
-            <span className="h-[1px] w-10 sm:w-16 bg-[#171614]/15" />
+          <div className="mt-3 sm:mt-4 flex items-center justify-center gap-3 select-none">
+            <span className="h-[1px] w-8 sm:w-14 bg-[#171614]/15" />
+            <p className="text-base sm:text-xl md:text-2xl font-serif tracking-wide text-[#171614]">
+              <span className="italic text-[#C25E38] font-normal mr-1.5">By</span>
+              <span className="font-semibold tracking-[0.2em] uppercase text-sm sm:text-lg md:text-xl">
+                SHRI
+              </span>
+            </p>
+            <span className="h-[1px] w-8 sm:w-14 bg-[#171614]/15" />
           </div>
+
+          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#9E988D] mt-2">
+            ESTD 2026
+          </span>
         </motion.div>
 
         {/* Editorial Sub-Headline */}
