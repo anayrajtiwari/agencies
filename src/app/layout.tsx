@@ -2,22 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SHRI Agencies | Strategic Growth, SEO & Digital Authority",
+  title: "SHRI Agencies — Strategic Presence, SEO & Visual Identity",
   description:
-    "We build noisy brands impossible to ignore. Technical SEO, social media domination, bespoke web craft, and high-impact digital presence. Launching October 2026.",
+    "A strategic creative practice by SHRI. Cultivating category-defining presence through deep search & AI retrieval, narrative direction, and bespoke identity systems. Launching October 2026.",
   keywords: [
     "SHRI Agencies",
-    "Digital Presence Agency",
+    "Creative Practice",
     "Deep SEO",
-    "Social Media Growth",
+    "AI Retrieval Indexing",
     "Brand Authority",
     "Anay Raj Tiwari",
-    "High Voltage Web Craft",
+    "Narrative Direction",
+    "Visual Identity",
   ],
   openGraph: {
-    title: "SHRI Agencies | The Anti-Agency for Visionaries",
+    title: "SHRI Agencies — Strategic Practice by SHRI",
     description:
-      "Deep search SEO, viral content syndication, and high-velocity web engineering. Launching October 2026.",
+      "Deep search authority, founder narrative architecture, and bespoke visual identity systems. Launching October 2026.",
     type: "website",
   },
 };
@@ -28,10 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className="bg-[#0a0b0f] text-[#f2f3f7] antialiased selection:bg-[#d8ff36] selection:text-black">
-        {/* Full-page tactile film grain overlay */}
-        <div className="grain-overlay" />
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-[#FBF9F5] text-[#171614] antialiased selection:bg-[#E8E2D5] selection:text-[#171614]">
+        {/* Archival tactile paper grain overlay */}
+        <div className="paper-grain" aria-hidden="true" />
         {children}
       </body>
     </html>
