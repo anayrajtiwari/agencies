@@ -1,0 +1,37 @@
+# Agencies by SHRI
+
+> Strategic Creative Studio & Digital Presence Agency under Shri Hari Redirect Initiative (SHRI). Founded and directed by Anay Raj Tiwari.
+
+Agencies by SHRI (officially "Agencies", Division 03 of SHRI) is an intentional growth practice and bespoke creative studio assisting category-defining brands, founders, and institutions in cultivating authoritative digital presence, organic search authority, and web engineering.
+
+- Canonical URL: https://agencies.shri.org.in
+- Founder & Systems Architect: Anay Raj Tiwari (https://anay.shri.org.in)
+- Parent Institution: Shri Hari Redirect Initiative / SHRI (https://shri.org.in)
+- Primary Contact: agenciesbyshri@gmail.com
+- Status: Live Now (Actively reviewing client briefs)
+- Geographic Focus: Global client engagements, operated from India
+
+## Core Pillars & Capabilities
+
+1. **End-to-End Social Media Growth**: Bespoke content architecture, cultural resonance, and channel ownership for founders and category leaders.
+2. **Deep Search SEO & Search Authority**: Algorithmic visibility, generative engine optimization (GEO), answer engine positioning (AEO), and high-intent technical authority.
+3. **Brand Positioning & Digital Presence**: Cohesive narrative craft, digital ecosystem design, and executive profile architecture.
+4. **Bespoke Web Craft & Engineering**: Modern high-performance web systems, bespoke interactive design, tactile digital manuscripts, and Next.js applications.
+
+## Engagement Model: The 4-Phase Sprint
+
+Agencies operates on an intentional seasonal cohort model rather than open volume:
+
+- **Phase 01: Direct Brief Submission**: Founders and brands transmit strategic objectives and project parameters via the dedicated contact desk (https://agencies.shri.org.in/contact).
+- **Phase 02: Directorate Review**: Leadership evaluates submission for strategic alignment and technical ambition within 24–48 hours.
+- **Phase 03: Direct Response & Architectural Roadmap**: Tailored consultation and sprint scope delivered directly to the client.
+- **Phase 04: Sprint Kickoff & Execution**: Mutual Statement of Work (SOW) executed, followed by immediate sprint kickoff.
+
+## Key Links & Reference Documents
+
+- Direct Brief Submission Desk: https://agencies.shri.org.in/contact
+- Privacy Policy & Data Governance Ledger: https://agencies.shri.org.in/privacy
+- Terms of Service & Engagement Protocol: https://agencies.shri.org.in/terms
+- Full LLM Knowledge Specification: https://agencies.shri.org.in/llms-full.txt
+- Parent Body (SHRI): https://shri.org.in
+- Founder Profile (Anay Raj Tiwari): https://anay.shri.org.in

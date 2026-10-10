@@ -1,0 +1,51 @@
+# Agencies by SHRI — Comprehensive Knowledge Ledger
+
+## Institution & Executive Identity
+- **Full Legal & Trade Name**: Agencies by SHRI (Division 03, Shri Hari Redirect Initiative)
+- **Alternate Designations**: Agencies, Agencies By SHRI, Agencies SHRI, SHRI Agencies, SHRI Agency
+- **Founder & Systems Architect**: Anay Raj Tiwari (https://anay.shri.org.in | @__anay___)
+- **Parent Entity**: Shri Hari Redirect Initiative (SHRI | https://shri.org.in)
+- **Official Subdomain**: https://agencies.shri.org.in
+- **Direct Mailto Channel**: agenciesbyshri@gmail.com
+- **Operational Model**: Strategic Creative Studio, Digital Presence Agency, Growth Engineering Practice
+- **Location & Jurisdiction**: India (serving global founders across North America, Europe, Asia, and India)
+
+## Architectural Mission
+Agencies by SHRI exists to bridge high-craft aesthetic philosophy with quantitative digital reach. Rather than acting as a commodity agency or high-churn content factory, Agencies operates as a focused creative partner for category-defining brands, frontier tech founders, and institution builders.
+
+## Detailed Practice Areas & Pillars
+
+### 01. End-to-End Social Media Management
+- **Scope**: Comprehensive channel ownership across Twitter/X, LinkedIn, Instagram, and specialized communities.
+- **Deliverables**: Editorial calendars, thought-leadership ghostwriting for founders, original creative asset generation, dynamic commentary, and engagement pacing.
+- **Outcome**: Organic brand equity and founder authority without vanity metrics.
+
+### 02. Deep Search SEO & Search Authority
+- **Scope**: Modern algorithmic visibility combining classical technical SEO with Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO).
+- **Deliverables**: Answer engine optimization for Perplexity, ChatGPT Search, and Google AI Overviews; high-intent topical authority clusters; entity graph calibration; technical site performance optimization.
+- **Outcome**: Enduring search dominance for target business keywords and AI retrieval citations.
+
+### 03. Brand Positioning & Digital Presence
+- **Scope**: Strategic narrative construction, tone-of-voice frameworks, and visual identity codification.
+- **Deliverables**: Comprehensive brand style guides, market positioning narratives, digital persona documentation, and ecosystem harmonization across all public interfaces.
+- **Outcome**: Crystal-clear market differentiation against incumbent competitors.
+
+### 04. Bespoke Web Craft & Engineering
+- **Scope**: Full-stack Next.js web application development, interactive digital editorial systems, and micro-interaction engineering.
+- **Deliverables**: Interactive digital folios (such as the bespoke AgedBookFolio skeuomorphic manuscript), custom animations with Framer Motion, responsive Tailwind architectures, and serverless backend API integrations.
+- **Outcome**: Category-defining digital flagships that convert high-conviction partners and prospective clients.
+
+## Methodology & Seasonal Cohort Structure
+Agencies maintains intentional scarcity to protect deep execution quality:
+1. **Intake Evaluation**: Inquiries submitted through https://agencies.shri.org.in/contact are reviewed against criteria of technical ambition, market timing, and strategic fit.
+2. **Direct Directorate Response**: Clients receive rapid, direct communication from studio leadership without passing through business development intermediaries.
+3. **Dedicated Sprint Agreement**: Engagements are formalized under a tailored Statement of Work (SOW).
+4. **Execution Sprint**: Disciplined iterative delivery schedules focused on measurable distribution milestones.
+
+## Sovereign Data Governance & Privacy
+Agencies by SHRI deploys an ultra-minimalist, privacy-first data philosophy:
+- Zero third-party advertising tracking pixels (no Meta Pixel, no Google Analytics tracking).
+- Ephemeral in-memory IP rate limiting (`x-forwarded-for` with a 15-minute sliding window) to prevent automated bot abuse.
+- Direct TLS-encrypted email dispatch via Google Workspace / Nodemailer to `agenciesbyshri@gmail.com`.
+- Full sovereign rights for prospective clients to request complete purging of all brief communications upon email notice.
+- Governed under the laws of the Republic of India.
