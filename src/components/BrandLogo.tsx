@@ -66,7 +66,9 @@ export default function BrandLogo({
           {/* Left Floral Floret & Line */}
           <div className="flex items-center gap-1.5">
             <span className="w-1 h-1 rounded-full bg-[#8A241C]" />
-            <span className="text-[10px] sm:text-xs">✤</span>
+            <svg viewBox="0 0 24 24" className="w-2.5 h-2.5 fill-[#8A241C]">
+              <polygon points="12,2 22,12 12,22 2,12" />
+            </svg>
             <div className="w-8 sm:w-16 h-[1.5px] bg-[#8A241C]" />
           </div>
 
@@ -77,7 +79,9 @@ export default function BrandLogo({
           {/* Right Floral Floret & Line */}
           <div className="flex items-center gap-1.5">
             <div className="w-8 sm:w-16 h-[1.5px] bg-[#8A241C]" />
-            <span className="text-[10px] sm:text-xs">✤</span>
+            <svg viewBox="0 0 24 24" className="w-2.5 h-2.5 fill-[#8A241C]">
+              <polygon points="12,2 22,12 12,22 2,12" />
+            </svg>
             <span className="w-1 h-1 rounded-full bg-[#8A241C]" />
           </div>
         </div>

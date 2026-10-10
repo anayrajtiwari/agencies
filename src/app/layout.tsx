@@ -2,23 +2,24 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Agencies By SHRI — Strategic Presence, SEO & Visual Identity",
+  title: "Strategic Creative Studio — Digital Presence & Growth Agency | By SHRI",
   description:
-    "A strategic creative practice by SHRI. Cultivating category-defining presence through deep search & AI retrieval, narrative direction, and bespoke identity systems. Launching October 2026.",
+    "Assisting brands, founders, and organizations in cultivating thoughtful digital presence through bespoke social media management, organic SEO authority, and clear digital positioning. Coming this October.",
   keywords: [
+    "Strategic Creative Studio",
+    "Digital Presence",
+    "Growth Agency",
+    "Social Media Growth",
+    "Deep Search SEO",
+    "Brand Positioning",
+    "Bespoke Web Craft",
     "Agencies By SHRI",
-    "Creative Practice",
-    "Deep SEO",
-    "AI Retrieval Indexing",
-    "Brand Authority",
     "Anay Raj Tiwari",
-    "Narrative Direction",
-    "Visual Identity",
   ],
   openGraph: {
-    title: "Agencies By SHRI — Strategic Practice by SHRI",
+    title: "Strategic Creative Studio — Digital Presence & Growth Agency | By SHRI",
     description:
-      "Deep search authority, founder narrative architecture, and bespoke visual identity systems. Launching October 2026.",
+      "Assisting brands, founders, and organizations in cultivating thoughtful digital presence through bespoke social media management, organic SEO authority, and clear digital positioning. Coming this October.",
     type: "website",
   },
 };

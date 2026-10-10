@@ -16,10 +16,10 @@ export default function Footer() {
               Pillars
             </h4>
             <div className="flex flex-col space-y-2.5 text-xs font-sans text-[#6B665E]">
-              <a href="#services" className="hover:text-[#171614] transition-colors">Deep SEO & AI Retrieval</a>
-              <a href="#services" className="hover:text-[#171614] transition-colors">Social Narrative Syndicate</a>
-              <a href="#services" className="hover:text-[#171614] transition-colors">Visual Identity Hegemony</a>
-              <a href="#vault" className="hover:text-[#171614] transition-colors">Ecosystem Portfolio</a>
+              <a href="#services" className="hover:text-[#171614] transition-colors">Social Media Growth</a>
+              <a href="#services" className="hover:text-[#171614] transition-colors">Deep Search SEO</a>
+              <a href="#services" className="hover:text-[#171614] transition-colors">Digital Presence</a>
+              <a href="#services" className="hover:text-[#171614] transition-colors">Bespoke Web Craft</a>
             </div>
           </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col space-y-2.5 text-xs font-sans text-[#6B665E]">
               <a href="#how-to-work" className="hover:text-[#171614] transition-colors">How to Work with Us</a>
-              <a href="#engage" className="hover:text-[#171614] transition-colors">October &apos;26 Cohort</a>
+              <a href="#engage" className="hover:text-[#171614] transition-colors">Engage Agency (October &apos;26)</a>
               <Link href="/contact" className="hover:text-[#171614] transition-colors flex items-center gap-1.5">
                 <Mail size={12} className="text-[#C25E38]" />
                 <span>Direct Email Desk</span>
@@ -64,11 +64,11 @@ export default function Footer() {
             <div className="flex flex-col space-y-2 text-xs font-sans text-[#6B665E]">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38] animate-pulse" />
-                <span className="text-[#171614] font-medium">October &apos;26 Inception</span>
+                <span className="text-[#171614] font-medium">Coming This October</span>
               </div>
               <a
                 href="mailto:agenciesbyshri@gmail.com"
-                className="font-mono text-xs text-[#171614] hover:text-[#C25E38] transition-colors"
+                className="font-sans font-medium text-xs text-[#171614] hover:text-[#C25E38] transition-colors"
               >
                 agenciesbyshri@gmail.com
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-sans text-[#9E988D] gap-4">
           <div>
-            © {new Date().getFullYear()} AGENCIES • AN INITIATIVE BY SHRI • DIVISION 03
+            © {new Date().getFullYear()} AGENCIES • STRATEGIC CREATIVE STUDIO • BY SHRI
           </div>
           <div className="flex items-center gap-6 font-medium">
             <span>STRATEGIC PRACTICE</span>

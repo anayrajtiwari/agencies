@@ -31,7 +31,7 @@ const fadeUpVariants: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-8 pt-36 pb-24 overflow-hidden bg-[#FBF9F5] dot-grid">
+    <section className="relative min-h-[85vh] sm:min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-8 pt-32 sm:pt-36 pb-16 sm:pb-24 overflow-hidden bg-[#FBF9F5] dot-grid">
       
       {/* ── Ambient Warm Lighting & Subtle Texture ── */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -56,7 +56,7 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center"
+        className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center w-full"
       >
         
         {/* Floating Cohort Badge with Gentle Levitation */}
@@ -70,63 +70,53 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[#171614]/10 shadow-[0_2px_12px_rgba(23,22,20,0.04)] mb-8 select-none"
+          className="inline-flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[#171614]/10 shadow-[0_2px_12px_rgba(23,22,20,0.04)] mb-6 sm:mb-8 select-none"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38] animate-pulse" />
-          <span className="font-sans text-[11px] font-semibold tracking-wider uppercase text-[#171614]">
-            Autumn 2026 Cohort
+          <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-[#171614]">
+            STRATEGIC CREATIVE STUDIO
           </span>
           <span className="w-1 h-1 rounded-full bg-[#171614]/20" />
-          <span className="font-serif italic text-xs text-[#6B665E]">
-            Direct Leadership Review
+          <span className="font-serif italic text-[11px] sm:text-xs text-[#6B665E]">
+            COMING THIS OCTOBER
           </span>
         </motion.div>
 
-        {/* Main Heading: Agencies with "By SHRI" beneath in smaller size */}
-        <motion.div variants={fadeUpVariants} className="mb-10 text-center flex flex-col items-center">
-          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[7.5rem] font-serif font-normal tracking-tight text-[#171614] leading-[0.95]">
-            Agencies
+        {/* Main Heading */}
+        <motion.div variants={fadeUpVariants} className="mb-6 sm:mb-8 text-center flex flex-col items-center w-full">
+          <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-[6.8rem] font-serif font-normal tracking-tight text-[#171614] leading-[1.04] sm:leading-[0.98] max-w-4xl px-2">
+            Digital Presence <br />
+            <span className="italic font-normal text-[#C25E38]">& Growth Agency</span>
           </h1>
 
-          <div className="mt-3 sm:mt-4 flex items-center justify-center gap-3 select-none">
-            <span className="h-[1px] w-8 sm:w-14 bg-[#171614]/15" />
-            <p className="text-base sm:text-xl md:text-2xl font-serif tracking-wide text-[#171614]">
+          <div className="mt-4 flex items-center justify-center gap-3 select-none">
+            <span className="h-[1px] w-6 sm:w-14 bg-[#171614]/15" />
+            <p className="text-sm sm:text-lg md:text-xl font-serif tracking-wide text-[#171614]">
               <span className="italic text-[#C25E38] font-normal mr-1.5">By</span>
-              <span className="font-semibold tracking-[0.2em] uppercase text-sm sm:text-lg md:text-xl">
+              <span className="font-semibold tracking-[0.2em] uppercase text-xs sm:text-base md:text-lg">
                 SHRI
               </span>
             </p>
-            <span className="h-[1px] w-8 sm:w-14 bg-[#171614]/15" />
+            <span className="h-[1px] w-6 sm:w-14 bg-[#171614]/15" />
           </div>
 
-          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#9E988D] mt-2">
-            ESTD 2026
+          <span className="font-sans text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.25em] text-[#9E988D] mt-2">
+            ESTD 2026 • DIVISION 03
           </span>
         </motion.div>
 
-        {/* Editorial Sub-Headline */}
-        <motion.h2
-          variants={fadeUpVariants}
-          className="text-2xl sm:text-3xl md:text-4xl font-serif italic font-normal tracking-tight text-[#171614] max-w-2xl mb-5 leading-snug"
-        >
-          We cultivate brands that become{" "}
-          <span className="underline decoration-[#171614]/20 underline-offset-8">
-            impossible to ignore.
-          </span>
-        </motion.h2>
-
-        {/* Articulate Editorial Subtext */}
+        {/* Editorial Subtext */}
         <motion.p
           variants={fadeUpVariants}
-          className="text-sm sm:text-base md:text-lg text-[#6B665E] font-sans font-normal max-w-xl leading-relaxed mb-12"
+          className="text-sm sm:text-lg md:text-xl font-serif italic text-[#171614]/40 tracking-wide mb-8 sm:mb-10 text-center px-4"
         >
-          A strategic creative practice by SHRI. Cultivating category-defining presence through deep search & AI retrieval, narrative direction, and bespoke identity systems.
+          Coming this October.
         </motion.p>
 
         {/* Action Controls with Spring Feedback */}
         <motion.div
           variants={fadeUpVariants}
-          className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center"
+          className="flex items-center justify-center w-full px-4"
         >
           <motion.div
             whileHover={{ scale: 1.025, y: -2 }}
@@ -136,55 +126,13 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] shadow-[0_4px_16px_rgba(23,22,20,0.12)] cursor-pointer"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-2.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-[11px] sm:text-xs tracking-wider uppercase px-5 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-[#2E2C28] shadow-[0_4px_16px_rgba(23,22,20,0.12)] cursor-pointer text-center"
             >
-              <Mail size={14} className="text-[#FBF9F5]" />
-              <span>Direct Email Desk</span>
-              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+              <Mail size={14} className="text-[#FBF9F5] shrink-0" />
+              <span>ENGAGE AGENCY (COMING THIS OCTOBER)</span>
+              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1 shrink-0" />
             </Link>
           </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.025, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 450, damping: 25 }}
-            className="w-full sm:w-auto"
-          >
-            <a
-              href="#services"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FFFFFF] hover:bg-[#F3EFE6] text-[#171614] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full border border-[#171614]/10 transition-colors shadow-sm"
-            >
-              <span>Explore Capabilities</span>
-              <ArrowRight size={14} className="text-[#6B665E]" />
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* Editorial Metrics Strip with Staggered Entrance */}
-        <motion.div
-          variants={fadeUpVariants}
-          className="mt-20 pt-10 border-t border-[#171614]/10 grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-4xl text-left"
-        >
-          {[
-            { metric: "+340%", label: "Organic search visibility surge" },
-            { metric: "10", label: "Partners per seasonal cohort" },
-            { metric: "0", label: "Templates or outsourced fluff" },
-            { metric: "Oct '26", label: "Target deployment milestone" },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-              className="space-y-1 group cursor-default"
-            >
-              <span className="text-3xl sm:text-4xl font-serif font-normal text-[#171614] tracking-tight block group-hover:text-[#C25E38] transition-colors duration-300">
-                {item.metric}
-              </span>
-              <span className="text-xs font-sans text-[#6B665E] block leading-tight">
-                {item.label}
-              </span>
-            </motion.div>
-          ))}
         </motion.div>
 
       </motion.div>

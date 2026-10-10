@@ -93,7 +93,7 @@ export default function VisualVault() {
                 
                 {/* Floating domain pill */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFFFF]/95 backdrop-blur-md text-[11px] font-mono text-[#171614] font-medium shadow-sm transition-transform duration-300 group-hover:scale-105">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFFFF]/95 backdrop-blur-md text-[11px] font-sans text-[#171614] font-medium shadow-sm transition-transform duration-300 group-hover:scale-105">
                     <Globe size={11} className="text-[#C25E38]" />
                     <span>{site.domain}</span>
                   </span>

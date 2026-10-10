@@ -4,9 +4,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MarqueeTicker from "@/components/MarqueeTicker";
-import ServicesGrid from "@/components/ServicesGrid";
-import VisualVault from "@/components/VisualVault";
-import HowToWorkWithUs from "@/components/HowToWorkWithUs";
+import AgedBookFolio from "@/components/AgedBookFolio";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,14 +19,8 @@ export default function Home() {
       {/* High-Velocity Marquee Ticker */}
       <MarqueeTicker />
 
-      {/* Services Grid (Deep Search, Social Syndicate, Brand Hegemony) */}
-      <ServicesGrid />
-
-      {/* The Visual Vault (Live Websites: shri.org.in, anay.shri.org.in, rzglyph.shri.org.in) */}
-      <VisualVault />
-
-      {/* How to Work with Us + Unified Engage '26 & Email Contact Desk */}
-      <HowToWorkWithUs />
+      {/* The Archival Aged Book: Turning Pages for Capabilities, The Vault, Process & Engage */}
+      <AgedBookFolio />
 
       {/* Footer */}
       <Footer />

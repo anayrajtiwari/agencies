@@ -2,51 +2,65 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Search, Share2, Palette, ArrowUpRight, Check } from "lucide-react";
+import { Search, Share2, Compass, Code2, ArrowUpRight, Check } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
     id: "01",
-    tag: "SEARCH AUTHORITY",
-    title: "Deep Search & AI Retrieval",
-    desc: "We engineer presence for the modern retrieval era. Indexing your complete brand taxonomy across Google, Perplexity, ChatGPT, and AI search agents through IndexNow, structured schema graphs, and llms.txt.",
+    tag: "END-TO-END MANAGEMENT",
+    title: "Social Media Growth",
+    desc: "Strategic content direction, community management, and high-resonance narratives across Instagram, X (Twitter), and YouTube.",
     deliverables: [
-      "IndexNow Instant API Syndication",
-      "LLM & AI Agent Semantic Knowledge Graphs",
-      "High-Frequency Technical Search Architecture",
-      "Structured JSON-LD Entity Hierarchy",
+      "Strategic Content Direction",
+      "Community Management & Moderation",
+      "High-Resonance Cross-Platform Narratives",
+      "Instagram, X (Twitter) & YouTube Growth",
+    ],
+    metric: "End-to-End Execution",
+    icon: Share2,
+  },
+  {
+    id: "02",
+    tag: "SEARCH AUTHORITY",
+    title: "Deep Search SEO",
+    desc: "Technical SEO, IndexNow instant search syndication, structured Schema markup, LLM / AI retrieval indexing (llms.txt), and ranking authority.",
+    deliverables: [
+      "Technical SEO & Schema Markup",
+      "IndexNow Instant Search Syndication",
+      "LLM / AI Retrieval Indexing (llms.txt)",
+      "Organic Search Ranking Authority",
     ],
     metric: "+340% Search Visibility Surge",
     icon: Search,
   },
   {
-    id: "02",
-    tag: "NARRATIVE SYNDICATE",
-    title: "Social Narrative & Direction",
-    desc: "End-to-end founder narrative engineering, high-status X/Twitter thread architectures, short-form visual direction, and industry commentary. We transform technical builders into undeniable category icons.",
+    id: "03",
+    tag: "BRAND POSITIONING",
+    title: "Digital Presence",
+    desc: "Transforming obscure brands into authoritative industry leaders through cohesive aesthetic identity and cross-platform presence.",
     deliverables: [
-      "Executive Founder Thought Leadership",
-      "X/Twitter & LinkedIn Narrative Ghostwriting",
-      "Editorial Short-Form Post-Production",
-      "Organic Community Flywheels",
+      "Cohesive Aesthetic Identity Systems",
+      "Cross-Platform Presence & Touchpoints",
+      "Industry Authority Architecture",
+      "Category Leadership & Narrative Moat",
     ],
-    metric: "0 to 100K Audience Cultivation",
-    icon: Share2,
+    metric: "Category-Defining Authority",
+    icon: Compass,
   },
   {
-    id: "03",
-    tag: "VISUAL HEGEMONY",
-    title: "Visual Identity & Systems",
-    desc: "Bespoke typographic curation, editorial art direction, motion design guidelines, and unmistakable aesthetic collateral. We build digital identities that command immediate respect and eliminate competitive parity.",
+    id: "04",
+    tag: "WEB ENGINEERING",
+    title: "Bespoke Web Craft",
+    desc: "High-performance Next.js web portals, interactive animations, zero-dependency tooling, and bespoke digital experiences.",
     deliverables: [
-      "Complete Brand Design Language & Book",
-      "Custom Typographic Systems & Palette",
-      "Tactile Motion & Presentation Kits",
-      "High-Converting Pitch & Sales Collateral",
+      "High-Performance Next.js Web Portals",
+      "Tactile & Interactive Framer Animations",
+      "Zero-Dependency Tooling & CLI Utilities",
+      "Bespoke Digital & Visual Experiences",
     ],
-    metric: "Unmistakable Aesthetic Moat",
-    icon: Palette,
+    metric: "<50ms Fluid Performance",
+    icon: Code2,
   },
 ];
 
@@ -59,7 +73,7 @@ export default function ServicesGrid() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8 border-b border-[#171614]/10 pb-10">
           <div>
             <span className="text-[#C25E38] font-sans text-xs font-semibold tracking-widest uppercase block mb-3">
-              Specialized Capabilities
+              Strategic Creative Studio • Coming This October
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal tracking-tight text-[#171614] leading-[1.08]">
               Strategic craft, built for <br />
@@ -70,12 +84,12 @@ export default function ServicesGrid() {
           </div>
 
           <p className="text-[#6B665E] font-sans text-sm max-w-sm leading-relaxed">
-            Every engagement is strictly bespoke. We partner with only ten high-conviction companies per cohort to guarantee direct founder attention and flawless execution.
+            Assisting brands, founders, and organizations in cultivating thoughtful digital presence through bespoke social media management, organic SEO authority, and clear digital positioning.
           </p>
         </div>
 
-        {/* 3-Column Luxury Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 4-Card Luxury Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, idx) => {
             const Icon = service.icon;
             return (
@@ -111,7 +125,7 @@ export default function ServicesGrid() {
                     </span>
                   </div>
 
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-[#6B665E] bg-[#F7F5EE] border border-[#171614]/8 px-3 py-1 rounded-full inline-block mb-4 group-hover:border-[#C25E38]/30 transition-colors duration-300">
+                  <span className="font-sans text-[11px] font-semibold uppercase tracking-wider text-[#6B665E] bg-[#F7F5EE] border border-[#171614]/8 px-3 py-1 rounded-full inline-block mb-4 group-hover:border-[#C25E38]/30 transition-colors duration-300">
                     {service.tag}
                   </span>
 

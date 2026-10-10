@@ -71,12 +71,12 @@ export default function UploadLogoPage() {
             Upload Brand Logo
           </h1>
           <p className="text-xs sm:text-sm text-[#6B665E] mb-8 leading-relaxed">
-            Upload the primary emblem or wordmark for <strong>Agencies, by SHRI</strong>. This file will be served at <code className="bg-[#F7F5EE] px-2 py-0.5 rounded font-mono text-xs text-[#171614]">/logo.jpeg</code> across the entire website.
+            Upload the primary emblem or wordmark for <strong>Agencies, by SHRI</strong>. This file will be served at <code className="bg-[#F7F5EE] px-2 py-0.5 rounded font-sans font-medium text-xs text-[#171614]">/logo.jpeg</code> across the entire website.
           </p>
 
           {/* Current Live Logo Preview */}
           <div className="mb-8 p-6 rounded-2xl bg-[#F7F5EE] border border-[#171614]/8 flex flex-col items-center">
-            <span className="text-[11px] font-mono uppercase text-[#9E988D] mb-4">
+            <span className="text-[11px] font-sans font-medium uppercase tracking-wider text-[#9E988D] mb-4">
               Current Active Logo
             </span>
             <div className="w-48 h-48 relative rounded-xl overflow-hidden border border-[#171614]/10 bg-[#FFFFFF] shadow-sm">
@@ -112,7 +112,7 @@ export default function UploadLogoPage() {
                   <span className="text-xs font-medium text-[#171614] block">
                     {file?.name}
                   </span>
-                  <span className="text-[11px] font-mono text-[#6B665E]">
+                  <span className="text-[11px] font-sans text-[#6B665E]">
                     {file ? `${(file.size / 1024).toFixed(1)} KB` : ""}
                   </span>
                 </div>

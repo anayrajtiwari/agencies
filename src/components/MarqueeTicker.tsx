@@ -3,14 +3,16 @@
 import React from "react";
 
 const itemsRow1 = [
-  { text: "Deep Search Authority", italic: false },
-  { text: "Narrative Engineering", italic: true },
-  { text: "AI Retrieval Indexing", italic: false },
-  { text: "Visual Hegemony", italic: true },
-  { text: "Founder Positioning", italic: false },
-  { text: "Direct Leadership Architecture", italic: true },
-  { text: "October 2026 Cohort", italic: false },
-  { text: "Zero Templates", italic: true },
+  { text: "Strategic Creative Studio", italic: false },
+  { text: "Coming This October", italic: true },
+  { text: "End-to-End Management", italic: false },
+  { text: "Social Media Growth", italic: true },
+  { text: "Search Authority", italic: false },
+  { text: "Deep Search SEO", italic: true },
+  { text: "Brand Positioning", italic: false },
+  { text: "Digital Presence", italic: true },
+  { text: "Web Engineering", italic: false },
+  { text: "Bespoke Web Craft", italic: true },
 ];
 
 export default function MarqueeTicker() {

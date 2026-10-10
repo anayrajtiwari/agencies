@@ -21,9 +21,9 @@ export default function Navbar() {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-5xl mx-auto"
+      className="fixed top-4 sm:top-6 left-0 right-0 z-50 px-3 sm:px-8 max-w-5xl mx-auto"
     >
-      <nav className="bg-[#FBF9F5]/90 backdrop-blur-md border border-[#171614]/10 rounded-full px-5 py-2.5 shadow-[0_4px_24px_rgba(23,22,20,0.04)] flex items-center justify-between">
+      <nav className="bg-[#FBF9F5]/90 backdrop-blur-md border border-[#171614]/10 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 shadow-[0_4px_24px_rgba(23,22,20,0.04)] flex items-center justify-between">
         
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3 group">

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FileText, SearchCheck, Mail, Rocket, ArrowRight, ArrowUpRight, Copy, Check, Sparkles } from "lucide-react";
+import { FileText, SearchCheck, Mail, Layers, ArrowRight, ArrowUpRight, Copy, Check } from "lucide-react";
 import Link from "next/link";
 
 const steps = [
@@ -28,7 +28,7 @@ const steps = [
     step: "04",
     title: "Sprint Kickoff & Deployment",
     desc: "Sprint agreements are finalized and execution begins immediately, locking in focused momentum toward our target October 2026 release.",
-    icon: Rocket,
+    icon: Layers,
   },
 ];
 
@@ -64,7 +64,7 @@ export default function HowToWorkWithUs() {
             <p className="text-[#6B665E] font-sans text-sm leading-relaxed mb-2">
               We operate exclusively on an intentional seasonal cohort model. Every submission is reviewed directly by the Agencies leadership under SHRI prior to partnership.
             </p>
-            <span className="text-xs font-mono text-[#171614] font-medium tracking-wide block">
+            <span className="text-xs font-sans text-[#171614] font-medium tracking-wide block">
               Criteria: Technical Ambition • Strategic Fit • October 2026 Target
             </span>
           </div>
@@ -110,7 +110,7 @@ export default function HowToWorkWithUs() {
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-[#171614]/6 text-[10px] font-mono uppercase tracking-widest text-[#9E988D] group-hover:text-[#171614] transition-colors duration-300">
+                <div className="mt-8 pt-4 border-t border-[#171614]/6 text-[11px] font-sans font-medium uppercase tracking-widest text-[#9E988D] group-hover:text-[#171614] transition-colors duration-300">
                   Stage {item.step} of 04
                 </div>
               </motion.div>
@@ -132,19 +132,19 @@ export default function HowToWorkWithUs() {
             {/* Left Column */}
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFFFFF] border border-[#171614]/10 text-[11px] font-sans font-medium text-[#171614] mb-4 shadow-sm">
-                <Sparkles size={12} className="text-[#C25E38]" />
-                <span>An Initiative by SHRI • October 2026 Cohort</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38]" />
+                <span>Strategic Creative Studio • Coming This October</span>
               </div>
 
               <h3 className="text-3xl sm:text-4xl font-normal tracking-tight text-[#171614] leading-[1.1] mb-4">
-                Engage Agencies, by SHRI & <br />
+                Engage Agency <br />
                 <span className="font-serif italic font-normal text-[#171614]">
-                  Direct Email Correspondence.
+                  (Coming This October).
                 </span>
               </h3>
 
               <p className="text-[#6B665E] text-sm sm:text-base leading-relaxed mb-8 font-normal">
-                Every project brief is scrutinized directly by our principal architects. If you wish to correspond directly,{" "}
+                Assisting brands, founders, and organizations in cultivating thoughtful digital presence through bespoke social media management, organic SEO authority, and clear digital positioning. If you wish to correspond directly,{" "}
                 <Link
                   href="/contact"
                   className="text-[#171614] font-semibold underline underline-offset-4 decoration-[#171614]/40 hover:decoration-[#171614] hover:text-[#C25E38] transition-colors"
@@ -152,7 +152,7 @@ export default function HowToWorkWithUs() {
                   click here
                 </Link>{" "}
                 to visit our dedicated contact desk where our official email address (
-                <strong className="text-[#171614] font-mono font-medium">agenciesbyshri@gmail.com</strong>
+                <strong className="text-[#171614] font-sans font-semibold">agenciesbyshri@gmail.com</strong>
                 ) is provided. You can write your email directly, and we will receive it immediately on our primary Gmail app.
               </p>
 
@@ -164,7 +164,7 @@ export default function HowToWorkWithUs() {
                     className="group inline-flex items-center justify-center gap-2 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] transition-all shadow-sm w-full sm:w-auto"
                   >
                     <Mail size={14} className="text-[#FBF9F5]" />
-                    <span>Click Here to Email Us</span>
+                    <span>Engage Agency (Coming This October)</span>
                     <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
@@ -178,13 +178,13 @@ export default function HowToWorkWithUs() {
                   <span className="text-[11px] font-sans uppercase tracking-widest text-[#9E988D] font-medium">
                     Official Agency Inbox
                   </span>
-                  <span className="flex items-center gap-1.5 text-[11px] font-mono text-[#C25E38]">
+                  <span className="flex items-center gap-1.5 text-[11px] font-sans font-medium text-[#C25E38]">
                     <span className="w-2 h-2 rounded-full bg-[#C25E38] animate-pulse" />
                     Live Gmail Desk
                   </span>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#171614]/8 font-mono text-sm sm:text-base text-[#171614] font-semibold select-all break-all mb-4 transition-colors hover:border-[#171614]/20">
+                <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#171614]/8 font-sans text-sm sm:text-base text-[#171614] font-semibold select-all break-all mb-4 transition-colors hover:border-[#171614]/20">
                   {emailAddress}
                 </div>
 
