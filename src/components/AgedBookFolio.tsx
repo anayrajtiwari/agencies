@@ -155,7 +155,7 @@ const stepsData = [
   {
     step: "04",
     title: "Sprint Kickoff & Deployment",
-    desc: "Sprint agreements are finalized and execution begins immediately, locking in focused momentum toward our target October 2026 release.",
+    desc: "Sprint agreements are finalized and execution begins immediately, locking in focused momentum toward immediate sprint deployment.",
     icon: Layers,
   },
 ];
@@ -778,7 +778,7 @@ export default function AgedBookFolio() {
 
                           <div className="pt-2 text-center">
                             <span className="font-serif italic text-xs text-[#171614]">
-                              Criteria: Technical Ambition • Strategic Fit • October 2026 Target
+                              Criteria: Technical Ambition • Strategic Fit • Active Intake
                             </span>
                           </div>
                         </div>

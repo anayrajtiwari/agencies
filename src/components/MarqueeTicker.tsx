@@ -4,7 +4,7 @@ import React from "react";
 
 const itemsRow1 = [
   { text: "Strategic Creative Studio", italic: false },
-  { text: "Coming This October", italic: true },
+  { text: "Live Now", italic: true },
   { text: "End-to-End Management", italic: false },
   { text: "Social Media Growth", italic: true },
   { text: "Search Authority", italic: false },

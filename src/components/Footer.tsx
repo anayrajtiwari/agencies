@@ -25,15 +25,17 @@ export default function Footer() {
 
           <div>
             <h4 className="text-[11px] font-sans font-semibold uppercase tracking-widest text-[#9E988D] mb-4">
-              Engagement
+              Engagement &amp; Legal
             </h4>
             <div className="flex flex-col space-y-2.5 text-xs font-sans text-[#6B665E]">
               <a href="#how-to-work" className="hover:text-[#171614] transition-colors">How to Work with Us</a>
-              <a href="#engage" className="hover:text-[#171614] transition-colors">Engage Agency (October &apos;26)</a>
+              <Link href="/contact" className="hover:text-[#171614] transition-colors">Engage Agency (Live Now)</Link>
               <Link href="/contact" className="hover:text-[#171614] transition-colors flex items-center gap-1.5">
                 <Mail size={12} className="text-[#C25E38]" />
                 <span>Direct Email Desk</span>
               </Link>
+              <Link href="/privacy" className="hover:text-[#171614] transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-[#171614] transition-colors">Terms of Service</Link>
             </div>
           </div>
 
@@ -64,7 +66,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-2 text-xs font-sans text-[#6B665E]">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38] animate-pulse" />
-                <span className="text-[#171614] font-medium">Coming This October</span>
+                <span className="text-[#171614] font-medium">Live Now</span>
               </div>
               <a
                 href="mailto:agenciesbyshri@gmail.com"
@@ -81,10 +83,12 @@ export default function Footer() {
           <div>
             © {new Date().getFullYear()} AGENCIES • STRATEGIC CREATIVE STUDIO • BY SHRI
           </div>
-          <div className="flex items-center gap-6 font-medium">
-            <span>STRATEGIC PRACTICE</span>
-            <span>HUMAN CRAFT</span>
-            <span>HIGH CONVICTION</span>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-[#171614] transition-colors">Privacy</Link>
+            <span>•</span>
+            <Link href="/terms" className="hover:text-[#171614] transition-colors">Terms</Link>
+            <span>•</span>
+            <span className="font-medium text-[#171614]/70">STRATEGIC PRACTICE</span>
           </div>
         </div>
 

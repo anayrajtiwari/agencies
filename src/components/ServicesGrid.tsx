@@ -73,7 +73,7 @@ export default function ServicesGrid() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8 border-b border-[#171614]/10 pb-10">
           <div>
             <span className="text-[#C25E38] font-sans text-xs font-semibold tracking-widest uppercase block mb-3">
-              Strategic Creative Studio • Coming This October
+              Strategic Creative Studio • Live Now
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal tracking-tight text-[#171614] leading-[1.08]">
               Strategic craft, built for <br />

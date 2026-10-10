@@ -77,8 +77,8 @@ export default function Hero() {
             STRATEGIC CREATIVE STUDIO
           </span>
           <span className="w-1 h-1 rounded-full bg-[#171614]/20" />
-          <span className="font-serif italic text-[11px] sm:text-xs text-[#6B665E]">
-            COMING THIS OCTOBER
+          <span className="font-serif italic text-[11px] sm:text-xs text-[#C25E38] font-medium">
+            LIVE NOW
           </span>
         </motion.div>
 
@@ -108,9 +108,9 @@ export default function Hero() {
         {/* Editorial Subtext */}
         <motion.p
           variants={fadeUpVariants}
-          className="text-sm sm:text-lg md:text-xl font-serif italic text-[#171614]/40 tracking-wide mb-8 sm:mb-10 text-center px-4"
+          className="text-sm sm:text-lg md:text-xl font-serif italic text-[#171614]/50 tracking-wide mb-8 sm:mb-10 text-center px-4"
         >
-          Coming this October.
+          Advising select brands and ambitious founders. Open for active engagement.
         </motion.p>
 
         {/* Action Controls with Spring Feedback */}
@@ -129,7 +129,7 @@ export default function Hero() {
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-2.5 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-[11px] sm:text-xs tracking-wider uppercase px-5 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-[#2E2C28] shadow-[0_4px_16px_rgba(23,22,20,0.12)] cursor-pointer text-center"
             >
               <Mail size={14} className="text-[#FBF9F5] shrink-0" />
-              <span>ENGAGE AGENCY (COMING THIS OCTOBER)</span>
+              <span>ENGAGE AGENCY • TRANSMIT BRIEF</span>
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1 shrink-0" />
             </Link>
           </motion.div>

@@ -27,7 +27,7 @@ const steps = [
   {
     step: "04",
     title: "Sprint Kickoff & Deployment",
-    desc: "Sprint agreements are finalized and execution begins immediately, locking in focused momentum toward our target October 2026 release.",
+    desc: "Sprint agreements are finalized and execution begins immediately, locking in focused momentum toward immediate sprint deployment.",
     icon: Layers,
   },
 ];
@@ -65,7 +65,7 @@ export default function HowToWorkWithUs() {
               We operate exclusively on an intentional seasonal cohort model. Every submission is reviewed directly by the Agencies leadership under SHRI prior to partnership.
             </p>
             <span className="text-xs font-sans text-[#171614] font-medium tracking-wide block">
-              Criteria: Technical Ambition • Strategic Fit • October 2026 Target
+              Criteria: Technical Ambition • Strategic Fit • Active Intake
             </span>
           </div>
         </div>
@@ -133,13 +133,13 @@ export default function HowToWorkWithUs() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFFFFF] border border-[#171614]/10 text-[11px] font-sans font-medium text-[#171614] mb-4 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C25E38]" />
-                <span>Strategic Creative Studio • Coming This October</span>
+                <span>Strategic Creative Studio • Live Now</span>
               </div>
 
               <h3 className="text-3xl sm:text-4xl font-normal tracking-tight text-[#171614] leading-[1.1] mb-4">
                 Engage Agency <br />
                 <span className="font-serif italic font-normal text-[#171614]">
-                  (Coming This October).
+                  (Live Now).
                 </span>
               </h3>
 
@@ -164,7 +164,7 @@ export default function HowToWorkWithUs() {
                     className="group inline-flex items-center justify-center gap-2 bg-[#171614] text-[#FBF9F5] font-sans font-medium text-xs tracking-wider uppercase px-8 py-4 rounded-full hover:bg-[#2E2C28] transition-all shadow-sm w-full sm:w-auto"
                   >
                     <Mail size={14} className="text-[#FBF9F5]" />
-                    <span>Engage Agency (Coming This October)</span>
+                    <span>Engage Agency (Live Now)</span>
                     <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
