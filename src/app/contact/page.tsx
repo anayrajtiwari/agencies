@@ -13,6 +13,7 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
@@ -36,12 +37,26 @@ export default function ContactPage() {
     return `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodedSubject}&body=${encodeURIComponent(fullBody)}`;
   };
 
+  const handleExternalClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!agreedToTerms) {
+      e.preventDefault();
+      setSubmitStatus("error");
+      setStatusMessage("Please agree to the Terms of Service and Privacy Policy before opening your email client.");
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!name.trim() || !email.trim() || !message.trim()) {
       setSubmitStatus("error");
       setStatusMessage("Please provide your name, contact email, and project overview.");
+      return;
+    }
+
+    if (!agreedToTerms) {
+      setSubmitStatus("error");
+      setStatusMessage("Please agree to the Terms of Service and Privacy Policy before dispatching your brief.");
       return;
     }
 
@@ -59,6 +74,7 @@ export default function ContactPage() {
           subject: subject || "October 2026 Cohort Application & Brief",
           message,
           honeypot,
+          agreedToTerms: true,
         }),
       });
 
@@ -282,6 +298,56 @@ export default function ContactPage() {
                     className="w-full bg-[#F7F5EE] border border-[#171614]/10 rounded-xl px-4 py-3 text-xs text-[#171614] placeholder-[#9E988D] focus:outline-none focus:border-[#171614] transition-colors resize-none"
                   />
                 </div>
+                {/* Consent to Terms & Privacy */}
+                <div className="pt-1">
+                  <label className="flex items-start gap-3 cursor-pointer select-none group">
+                    <div className="relative flex items-center justify-center mt-0.5 shrink-0">
+                      <input
+                        type="checkbox"
+                        required
+                        checked={agreedToTerms}
+                        onChange={(e) => {
+                          setAgreedToTerms(e.target.checked);
+                          if (submitStatus === "error") {
+                            setSubmitStatus("idle");
+                            setStatusMessage("");
+                          }
+                        }}
+                        className="sr-only peer"
+                      />
+                      <div
+                        className={`w-4 h-4 rounded border transition-all flex items-center justify-center ${
+                          agreedToTerms
+                            ? "bg-[#171614] border-[#171614]"
+                            : "border-[#171614]/30 bg-[#F7F5EE] group-hover:border-[#171614]"
+                        }`}
+                      >
+                        {agreedToTerms && <Check size={11} className="text-[#FBF9F5] stroke-[3]" />}
+                      </div>
+                    </div>
+                    <span className="text-xs font-sans text-[#6B665E] leading-relaxed">
+                      I have read and agree to the{" "}
+                      <Link
+                        href="/terms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-[#171614] underline underline-offset-2 hover:text-[#C25E38] transition-colors"
+                      >
+                        Terms of Service
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        href="/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-[#171614] underline underline-offset-2 hover:text-[#C25E38] transition-colors"
+                      >
+                        Privacy Policy
+                      </Link>
+                      . <span className="text-[#8A241C]">*</span>
+                    </span>
+                  </label>
+                </div>
               </div>
 
               {/* Action Triggers */}
@@ -300,6 +366,7 @@ export default function ContactPage() {
                     href={getGmailWebUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleExternalClick}
                     className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#F7F5EE] border border-[#171614]/10 text-[#171614] font-sans font-semibold text-xs tracking-wider uppercase px-5 py-3.5 rounded-full hover:bg-[#EDE8DC] transition-all cursor-pointer min-h-[44px]"
                   >
                     <span>Open in Gmail Web</span>
@@ -308,6 +375,7 @@ export default function ContactPage() {
 
                   <a
                     href={getMailtoUrl()}
+                    onClick={handleExternalClick}
                     className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#F7F5EE] border border-[#171614]/10 text-[#6B665E] hover:text-[#171614] font-sans font-medium text-xs tracking-wider uppercase px-5 py-3.5 rounded-full hover:bg-[#EDE8DC] transition-all cursor-pointer min-h-[44px]"
                   >
                     <span>Mail Client</span>

@@ -7,6 +7,7 @@ interface ContactRequestBody {
   subject?: string;
   message?: string;
   honeypot?: string; // Hidden spam-trap field
+  agreedToTerms?: boolean; // Terms & Privacy consent flag
 }
 
 // In-memory rate limiting map: IP -> timestamp[]
@@ -137,6 +138,7 @@ SENDER DETAILS:
 - Target Subject: ${finalSubject}
 - Timestamp:      ${formattedDate} (IST)
 - IP Origin:      ${ip}
+- Legal Consent:  Agreed to Terms of Service & Privacy Policy
 
 ------------------------------------------------------
 PROJECT BRIEF & REQUIREMENTS:
@@ -204,6 +206,10 @@ Agencies, by SHRI • Division 03 • Directorate of Digital Presence
                 <tr>
                   <td style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #8A241C;">Received:</td>
                   <td style="color: #5C4D38;">${formattedDate} (IST)</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #8A241C;">Legal Consent:</td>
+                  <td style="color: #2D5A27; font-weight: 600;">&#10003; Agreed to Terms of Service &amp; Privacy Policy</td>
                 </tr>
               </table>
             </td>
