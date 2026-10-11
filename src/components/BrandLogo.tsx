@@ -21,7 +21,7 @@ export default function BrandLogo({
     return (
       <div className={`relative rounded-full overflow-hidden border border-[#171614]/15 shadow-sm bg-[#F5F1E8] ${className}`}>
         <Image
-          src="/logo.jpeg"
+          src="/logo.svg"
           alt="Agencies, by SHRI"
           width={48}
           height={48}
@@ -105,7 +105,7 @@ export default function BrandLogo({
   return (
     <div className={`relative ${sizeClasses} ${className}`}>
       <Image
-        src="/logo.jpeg"
+        src="/logo.svg"
         alt="Agencies, by SHRI • ESTD 2026"
         width={1254}
         height={1254}

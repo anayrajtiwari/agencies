@@ -34,7 +34,7 @@ export default function Navbar() {
             className="w-8 h-8 rounded-full overflow-hidden border border-[#171614]/15 shadow-sm bg-[#F5F1E8] shrink-0"
           >
             <Image
-              src="/logo.jpeg"
+              src="/logo.svg"
               alt="Agencies, by SHRI"
               width={64}
               height={64}
