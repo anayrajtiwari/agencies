@@ -205,30 +205,90 @@ export default function AgedBookFolio() {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchStartY, setTouchStartY] = useState<number | null>(null);
   const emailAddress = "agenciesbyshri@gmail.com";
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  
+  // Audio state refs for bulletproof mobile and desktop playback
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const audioBufferRef = useRef<AudioBuffer | null>(null);
+  const isAudioLoadingRef = useRef<boolean>(false);
+  const htmlAudioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Preload page-turn audio safely on client mount with zero risk of crashing
-  useEffect(() => {
+  // Initialize or resume audio context upon user interaction
+  const initAudio = () => {
+    if (typeof window === "undefined") return;
+
     try {
-      if (typeof window !== "undefined" && typeof Audio !== "undefined") {
+      // 1. Initialize HTML5 Audio fallback
+      if (!htmlAudioRef.current && typeof Audio !== "undefined") {
         const audio = new Audio("/page-flip.mp3");
         audio.preload = "auto";
-        audio.volume = 0.55;
-        audio.load();
-        audioRef.current = audio;
+        audio.volume = 0.65;
+        htmlAudioRef.current = audio;
+      }
+
+      // 2. Initialize Web Audio API for instantaneous mobile playback
+      const AudioCtxClass =
+        window.AudioContext ||
+        (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+
+      if (AudioCtxClass) {
+        if (!audioContextRef.current) {
+          audioContextRef.current = new AudioCtxClass();
+        }
+        if (audioContextRef.current.state === "suspended") {
+          audioContextRef.current.resume();
+        }
+
+        if (!audioBufferRef.current && !isAudioLoadingRef.current) {
+          isAudioLoadingRef.current = true;
+          fetch("/page-flip.mp3")
+            .then((res) => res.arrayBuffer())
+            .then((arrayBuffer) => {
+              if (audioContextRef.current) {
+                return audioContextRef.current.decodeAudioData(arrayBuffer);
+              }
+              return null;
+            })
+            .then((decodedBuffer) => {
+              if (decodedBuffer) {
+                audioBufferRef.current = decodedBuffer;
+              }
+              isAudioLoadingRef.current = false;
+            })
+            .catch(() => {
+              isAudioLoadingRef.current = false;
+            });
+        }
       }
     } catch {
-      // Graceful fallback: audio load failure never disrupts the component or animations
-      audioRef.current = null;
+      // Safe no-op
     }
+  };
+
+  // Pre-load audio buffer and setup listeners on mount
+  useEffect(() => {
+    initAudio();
+
+    // Global first user interaction listener to unlock audio engine immediately on mobile
+    const unlockAudio = () => {
+      initAudio();
+      window.removeEventListener("touchstart", unlockAudio);
+      window.removeEventListener("touchend", unlockAudio);
+      window.removeEventListener("click", unlockAudio);
+    };
+
+    window.addEventListener("touchstart", unlockAudio, { passive: true });
+    window.addEventListener("touchend", unlockAudio, { passive: true });
+    window.addEventListener("click", unlockAudio, { passive: true });
 
     return () => {
-      if (audioRef.current) {
+      window.removeEventListener("touchstart", unlockAudio);
+      window.removeEventListener("touchend", unlockAudio);
+      window.removeEventListener("click", unlockAudio);
+      if (audioContextRef.current && audioContextRef.current.state !== "closed") {
         try {
-          audioRef.current.pause();
-          audioRef.current = null;
+          audioContextRef.current.close();
         } catch {
-          // ignore
+          // Ignore
         }
       }
     };
@@ -236,18 +296,51 @@ export default function AgedBookFolio() {
 
   // Play page-turn sound synchronized with leaf turn
   const playPageTurnSound = () => {
+    if (typeof window === "undefined") return;
+
+    // Trigger audio init if not already loaded
+    initAudio();
+
+    // Strategy 1: Web Audio API (Zero latency, perfectly reliable on mobile after user interaction)
     try {
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        const playPromise = audioRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(() => {
-            // Silently absorb browser autoplay restriction or audio decode issues
-          });
+      const ctx = audioContextRef.current;
+      const buffer = audioBufferRef.current;
+      if (ctx && buffer) {
+        if (ctx.state === "suspended") {
+          ctx.resume();
         }
+        const source = ctx.createBufferSource();
+        source.buffer = buffer;
+        const gainNode = ctx.createGain();
+        gainNode.gain.value = 0.65;
+        source.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        source.start(0);
+        return;
       }
     } catch {
-      // Safe no-op: failure in audio will never throw or interrupt state changes
+      // Fall through to HTML5 audio
+    }
+
+    // Strategy 2: Direct HTML5 Audio playback on user gesture
+    try {
+      const sound = new Audio("/page-flip.mp3");
+      sound.volume = 0.65;
+      const playPromise = sound.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          if (htmlAudioRef.current) {
+            try {
+              htmlAudioRef.current.currentTime = 0;
+              htmlAudioRef.current.play().catch(() => {});
+            } catch {
+              // Ignore
+            }
+          }
+        });
+      }
+    } catch {
+      // Safe fallback
     }
   };
 
@@ -288,6 +381,7 @@ export default function AgedBookFolio() {
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
     setTouchStartY(e.touches[0].clientY);
+    initAudio();
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
@@ -400,7 +494,12 @@ export default function AgedBookFolio() {
           <div className="flex lg:hidden items-center justify-center mb-3 select-none">
             <div className="inline-flex p-1 bg-[#2C2117] rounded-full border border-[#483726]">
               <button
-                onClick={() => setMobileLeafView("letter")}
+                onClick={() => {
+                  if (mobileLeafView !== "letter") {
+                    playPageTurnSound();
+                    setMobileLeafView("letter");
+                  }
+                }}
                 className={`px-3.5 py-1 rounded-full font-sans text-[11px] font-semibold tracking-wider transition-all cursor-pointer ${
                   mobileLeafView === "letter"
                     ? "bg-[#8A241C] text-[#FAF4E4] shadow-sm"
@@ -410,7 +509,12 @@ export default function AgedBookFolio() {
                 Dispatch Letter
               </button>
               <button
-                onClick={() => setMobileLeafView("plate")}
+                onClick={() => {
+                  if (mobileLeafView !== "plate") {
+                    playPageTurnSound();
+                    setMobileLeafView("plate");
+                  }
+                }}
                 className={`px-3.5 py-1 rounded-full font-sans text-[11px] font-semibold tracking-wider transition-all cursor-pointer ${
                   mobileLeafView === "plate"
                     ? "bg-[#8A241C] text-[#FAF4E4] shadow-sm"
