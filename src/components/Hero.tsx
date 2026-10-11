@@ -35,21 +35,10 @@ export default function Hero() {
       
       {/* ── Ambient Warm Lighting & Subtle Texture ── */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Soft warm sunbeam / radial glow with slow breathing float */}
-        <motion.div
-          animate={{
-            scale: [1, 1.08, 1],
-            opacity: [0.7, 0.9, 0.7],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[950px] h-[520px] bg-gradient-to-b from-[#F0EBE1] via-[#F7F3EB]/70 to-transparent blur-[130px] rounded-full"
-        />
-        <div className="absolute top-1/3 -right-20 w-[500px] h-[500px] bg-[#EFE9DD]/50 blur-[140px] rounded-full" />
-        <div className="absolute -bottom-20 -left-20 w-[550px] h-[550px] bg-[#F3EFE6]/60 blur-[130px] rounded-full" />
+        {/* Soft warm sunbeam / radial glow with zero-cost CSS radial gradient */}
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[950px] h-[520px] bg-[radial-gradient(ellipse_at_center,rgba(240,235,225,0.85)_0%,rgba(247,243,235,0.45)_50%,transparent_75%)] rounded-full" />
+        <div className="hidden sm:block absolute top-1/3 -right-20 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(239,233,221,0.5)_0%,transparent_70%)] rounded-full" />
+        <div className="hidden sm:block absolute -bottom-20 -left-20 w-[550px] h-[550px] bg-[radial-gradient(circle_at_center,rgba(243,239,230,0.6)_0%,transparent_70%)] rounded-full" />
       </div>
 
       <motion.div

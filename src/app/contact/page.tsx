@@ -107,7 +107,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#FBF9F5] text-[#171614] selection:bg-[#E8E2D5] selection:text-[#171614] relative py-12 px-4 sm:px-8 dot-grid">
       
       {/* Background paper texture & warm ambient glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-b from-[#F0EBE1] to-transparent blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[radial-gradient(ellipse_at_center,_#F0EBE1_0%,_transparent_70%)] rounded-full pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}

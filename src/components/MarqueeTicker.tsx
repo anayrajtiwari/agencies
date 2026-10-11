@@ -17,7 +17,7 @@ const itemsRow1 = [
 
 export default function MarqueeTicker() {
   return (
-    <div className="py-5 overflow-hidden border-y border-[#171614]/10 bg-[#F5F1E8]/70 backdrop-blur-sm relative z-20 select-none">
+    <div className="py-5 overflow-hidden border-y border-[#171614]/10 bg-[#F5F1E8] relative z-20 select-none">
       <div className="animate-marquee whitespace-nowrap flex items-center gap-10">
         {[...itemsRow1, ...itemsRow1, ...itemsRow1].map((item, i) => (
           <span

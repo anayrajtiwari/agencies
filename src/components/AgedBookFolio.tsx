@@ -345,7 +345,7 @@ export default function AgedBookFolio() {
 
       {/* Atmospheric warm ambient study lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[750px] bg-gradient-to-b from-[#FFFFFF]/70 via-[#EAE1CF]/40 to-transparent blur-[150px] rounded-full" />
+        <div className="hidden sm:block absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[750px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.7)_0%,rgba(234,225,207,0.35)_40%,transparent_70%)] rounded-full" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -435,6 +435,7 @@ export default function AgedBookFolio() {
                 style={{
                   clipPath: tornPaperPolygon,
                   boxShadow: "0 10px 30px rgba(0,0,0,0.8)",
+                  transform: "translateZ(0)",
                 }}
               />
 
@@ -444,16 +445,14 @@ export default function AgedBookFolio() {
                 style={{
                   clipPath: tornPaperPolygon,
                   backgroundColor: "#F7F2E2",
-                  backgroundImage: `
-                    radial-gradient(circle at 15% 50%, rgba(255, 250, 238, 0.98) 35%, rgba(246, 238, 218, 0.94) 65%, rgba(218, 198, 155, 0.95) 86%, rgba(130, 98, 52, 0.98) 96%, rgba(22, 16, 10, 0.99) 100%),
-                    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")
-                  `,
+                  backgroundImage: `radial-gradient(circle at 15% 50%, rgba(255, 250, 238, 0.98) 35%, rgba(246, 238, 218, 0.94) 65%, rgba(218, 198, 155, 0.95) 86%, rgba(130, 98, 52, 0.98) 96%, rgba(22, 16, 10, 0.99) 100%)`,
                   boxShadow: `
                     inset 0 0 45px rgba(125, 95, 45, 0.35),
                     inset 0 0 16px rgba(35, 25, 15, 0.65),
                     inset 0 0 4px rgba(15, 10, 5, 0.9)
                   `,
                   border: "1px solid rgba(75, 55, 30, 0.5)",
+                  transform: "translateZ(0)",
                 }}
               >
                 {/* Yellowish-amber foxing and blackish burnt corner vignettes */}
@@ -561,6 +560,8 @@ export default function AgedBookFolio() {
                   style={{
                     transformOrigin: "left center",
                     transformStyle: "preserve-3d",
+                    willChange: "transform, opacity",
+                    backfaceVisibility: "hidden",
                   }}
                   className="relative w-full h-full min-h-[500px] sm:min-h-[580px] lg:min-h-[720px] flex flex-col justify-between"
                 >
@@ -571,6 +572,7 @@ export default function AgedBookFolio() {
                     style={{
                       clipPath: tornPaperPolygon,
                       boxShadow: "0 14px 40px rgba(0,0,0,0.85)",
+                      transform: "translateZ(0)",
                     }}
                   />
 
@@ -580,16 +582,14 @@ export default function AgedBookFolio() {
                     style={{
                       clipPath: tornPaperPolygon,
                       backgroundColor: "#FAF5E6",
-                      backgroundImage: `
-                        radial-gradient(circle at 80% 50%, rgba(255, 252, 242, 0.98) 40%, rgba(247, 239, 220, 0.95) 68%, rgba(220, 201, 160, 0.94) 87%, rgba(135, 102, 54, 0.98) 96%, rgba(22, 16, 10, 0.99) 100%),
-                        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise2)' opacity='0.04'/%3E%3C/svg%3E")
-                      `,
+                      backgroundImage: `radial-gradient(circle at 80% 50%, rgba(255, 252, 242, 0.98) 40%, rgba(247, 239, 220, 0.95) 68%, rgba(220, 201, 160, 0.94) 87%, rgba(135, 102, 54, 0.98) 96%, rgba(22, 16, 10, 0.99) 100%)`,
                       boxShadow: `
                         inset 0 0 45px rgba(125, 95, 45, 0.35),
                         inset 0 0 16px rgba(35, 25, 15, 0.65),
                         inset 0 0 4px rgba(15, 10, 5, 0.9)
                       `,
                       border: "1px solid rgba(75, 55, 30, 0.5)",
+                      transform: "translateZ(0)",
                     }}
                   >
                     
