@@ -38,8 +38,8 @@ export const structuredGraphSchema = {
       ],
       "legalName": "Agencies by SHRI (Division 03, Shri Hari Redirect Initiative)",
       "url": "https://agencies.shri.org.in",
-      "logo": "https://agencies.shri.org.in/favicon.ico",
-      "image": "https://shri.org.in/og-image.png",
+      "logo": "https://agencies.shri.org.in/logo.png",
+      "image": "https://agencies.shri.org.in/og-image.png",
       "description":
         "Strategic Creative Studio and Digital Presence & Growth Agency founded by Anay Raj Tiwari under Shri Hari Redirect Initiative (SHRI). Specializing in bespoke social media management, deep search SEO authority, brand positioning, and bespoke web engineering.",
       "email": "agenciesbyshri@gmail.com",

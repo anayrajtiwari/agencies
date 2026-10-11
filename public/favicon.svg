@@ -1,0 +1,55 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Deep Archival Charcoal Ink Foundation -->
+  <rect width="192" height="192" rx="44" fill="#171614" />
+  
+  <!-- Subtle Archival Inner Hairline Border -->
+  <rect x="9" y="9" width="174" height="174" rx="36" fill="none" stroke="#FBF9F5" stroke-width="1.75" stroke-opacity="0.18" />
+
+  <!-- Sacred Diamond Star & Flanking Dots (Top Apex) -->
+  <g transform="translate(96, 32)">
+    <circle cx="-20" cy="0" r="2.5" fill="#C25E38" />
+    <polygon points="0,-10 9,0 0,10 -9,0" fill="#C25E38" />
+    <circle cx="20" cy="0" r="2.5" fill="#C25E38" />
+  </g>
+
+  <!-- Editorial High-Contrast Roman Serif 'A' -->
+  <g fill="#FBF9F5">
+    <!-- 
+      Classic Roman capital A:
+      - Left stem: delicate hairline
+      - Right stem: bold architectural stroke
+      - Serifs at left foot, right foot, and apex
+    -->
+    <path d="
+      M 96,52 
+      L 100,52 
+      L 132,136 
+      L 142,136 
+      L 142,142 
+      L 116,142 
+      L 116,136 
+      L 124,136 
+      L 115,112 
+      L 77,112 
+      L 68,136 
+      L 76,136 
+      L 76,142 
+      L 50,142 
+      L 50,136 
+      L 60,136 
+      L 92,52 
+      Z 
+      M 96,68 
+      L 81,105 
+      L 112,105 
+      Z" fill-rule="evenodd" />
+  </g>
+
+  <!-- Crimson Baseline Flourish Rule with Flanking Micro-Diamonds -->
+  <g transform="translate(96, 154)">
+    <line x1="-36" y1="0" x2="36" y2="0" stroke="#C25E38" stroke-width="2" stroke-linecap="round" />
+    <circle cx="-42" cy="0" r="1.8" fill="#C25E38" />
+    <circle cx="42" cy="0" r="1.8" fill="#C25E38" />
+  </g>
+</svg>

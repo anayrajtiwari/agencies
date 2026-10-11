@@ -8,11 +8,25 @@ export const metadata: Metadata = {
     canonical: "https://agencies.shri.org.in",
   },
   title: {
-    default: "Agencies by SHRI — Strategic Creative Studio & Digital Presence Agency",
+    default: "Agencies by SHRI — Strategic Creative Studio & Growth Agency",
     template: "%s | Agencies by SHRI",
   },
   description:
-    "Agencies by SHRI (Division 03 of Shri Hari Redirect Initiative) — bespoke strategic creative studio founded by Anay Raj Tiwari uniting social media growth, deep search SEO authority, brand positioning, and web engineering for category-defining brands and ambitious founders.",
+    "Agencies by SHRI is a bespoke strategic creative studio & digital growth agency by Anay Raj Tiwari. Social media growth, deep search SEO, and web craft.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon-192x192.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   keywords: [
     // Primary Brand & Name Permutations
     "Agencies",
@@ -66,24 +80,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://agencies.shri.org.in",
     siteName: "Agencies by SHRI",
-    title: "Agencies by SHRI — Strategic Creative Studio & Digital Presence Agency",
+    title: "Agencies by SHRI — Strategic Creative Studio & Growth Agency",
     description:
       "Bespoke social media management, organic search authority (Deep Search SEO), brand positioning, and web engineering. Division 03 of Shri Hari Redirect Initiative, founded by Anay Raj Tiwari.",
     images: [
       {
-        url: "https://shri.org.in/og-image.png",
+        url: "https://agencies.shri.org.in/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Agencies by SHRI — Founded by Anay Raj Tiwari",
+        alt: "Agencies by SHRI — Strategic Creative Studio & Digital Presence Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agencies by SHRI — Strategic Creative Studio & Digital Presence Agency",
+    title: "Agencies by SHRI — Strategic Creative Studio & Growth Agency",
     description:
       "Bespoke social media management, organic search authority (Deep Search SEO), brand positioning, and web engineering. Division 03 of Shri Hari Redirect Initiative, founded by Anay Raj Tiwari.",
-    images: ["https://shri.org.in/og-image.png"],
+    images: ["https://agencies.shri.org.in/og-image.png"],
     creator: "@__anay___",
     site: "@__anay___",
   },
